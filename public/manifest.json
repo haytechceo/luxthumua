@@ -1,0 +1,28 @@
+{
+  "name": "LuxPhone - Thu mua điện thoại, laptop cũ",
+  "short_name": "LuxPhone",
+  "description": "Dịch vụ thu mua điện thoại, laptop cũ giá cao, uy tín",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#15803d",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
