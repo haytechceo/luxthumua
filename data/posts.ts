@@ -76,7 +76,7 @@ Bạn đang có máy tính cũ muốn bán? Hãy liên hệ ngay với LuxPhone 
 - **Hotline**: 0328488888
 - **Zalo**: [Chat ngay](https://zalo.me/0328488888)
 - **Messenger**: [Nhắn tin](https://m.me/luxphone.vn)
-- **Email**: contact@luxphone.vn
+- **Email**: luxphonemobile@gmail.com
 
 Chúng tôi cam kết mang đến dịch vụ thu mua máy tính cũ uy tín, giá cao, thanh toán nhanh chóng nhất tại Hà Nội và TP.HCM.
     `,
@@ -321,7 +321,7 @@ Hiện tại chúng tôi chỉ hỗ trợ thu mua tận nhà tại **Hà Nội**
 - Hotline: **0328488888**
 - Zalo: [Chat ngay](https://zalo.me/0328488888)
 - Messenger: [Nhắn tin](https://m.me/luxphone.vn)
-- Email: contact@luxphone.vn
+- Email: luxphonemobile@gmail.com
     `,
   },
 ]

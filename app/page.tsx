@@ -8,8 +8,18 @@ import { BannerSlider } from "@/components/banner-slider"
 import { getArticleSchema } from "@/lib/structured-data"
 import { benefits, whyChooseUs } from "@/data/site"
 import { services } from "@/data/services"
-import { CheckCircle2 } from "lucide-react"
+import { Award, Banknote, Calculator, Headset, Layers, ShieldCheck, Zap } from "lucide-react"
 import type { Metadata } from "next"
+
+const iconMap = {
+  Award,
+  Banknote,
+  Calculator,
+  Headset,
+  Layers,
+  ShieldCheck,
+  Zap,
+}
 
 export const metadata: Metadata = {
   title: "Thu mua điện thoại, laptop cũ giá cao - Uy tín, thanh toán nhanh | LuxPhone",
@@ -81,20 +91,23 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {whyChooseUs.map((item, index) => (
-              <div
-                key={index}
-                className="flex gap-3 sm:gap-4 rounded-lg border border-border bg-card p-4 sm:p-6 transition-all hover:shadow-md"
-              >
-                <div className="flex-shrink-0">
-                  <CheckCircle2 className="h-5 w-5 sm:h-6 sm:w-6 text-green-700" />
+            {whyChooseUs.map((item, index) => {
+              const Icon = iconMap[item.icon as keyof typeof iconMap]
+              return (
+                <div
+                  key={index}
+                  className="flex gap-3 sm:gap-4 rounded-lg border border-border bg-card p-4 sm:p-6 transition-all hover:shadow-md"
+                >
+                  <div className="flex-shrink-0">
+                    {Icon && <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-green-700" />}
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sm sm:text-base text-foreground mb-1 sm:mb-2">{item.title}</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{item.description}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-sm sm:text-base text-foreground mb-1 sm:mb-2">{item.title}</h3>
-                  <p className="text-xs sm:text-sm text-muted-foreground">{item.description}</p>
-                </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>

@@ -29,7 +29,7 @@ Mở file `data/site.ts` và chỉnh sửa:
 export const siteConfig = {
   name: "LuxPhone", // Tên thương hiệu
   phone: "0328488888", // Số điện thoại
-  email: "contact@luxphone.vn", // Email
+  email: "luxphonemobile@gmail.com", // Email
   zalo: "https://zalo.me/0328488888", // Link Zalo
   messenger: "https://m.me/luxphone.vn", // Link Messenger
   address: "123 Đường Láng, Đống Đa, Hà Nội", // Địa chỉ

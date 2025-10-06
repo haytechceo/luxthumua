@@ -17,7 +17,7 @@ export const siteConfig = {
     },
   ],
   phone: "0328488888",
-  email: "contact@luxthumua.com",
+  email: "luxphonemobile@gmail.com",
   zalo: "https://zalo.me/0328488888",
   messenger: "https://www.facebook.com/luxphonetantam",
   workingHours: "Thứ 2 - Chủ nhật: 8:00 - 21:00",
@@ -46,29 +46,36 @@ export const whyChooseUs = [
   {
     title: "Uy tín hàng đầu",
     description: "Hơn 10 năm kinh nghiệm trong ngành thu mua thiết bị điện tử",
+    icon: "Award",
   },
   {
     title: "Thanh toán nhanh chóng",
     description: "Thanh toán ngay sau khi thỏa thuận giá, chuyển khoản hoặc tiền mặt",
+    icon: "Banknote",
   },
   {
     title: "Định giá minh bạch",
     description: "Quy trình định giá rõ ràng, không phát sinh chi phí ẩn",
+    icon: "Calculator",
   },
   {
     title: "Hỗ trợ 24/7",
     description: "Luôn sẵn sàng tư vấn và hỗ trợ khách hàng mọi lúc",
+    icon: "Headset",
   },
   {
     title: "Thu mua đa dạng",
     description: "Nhận thu mua mọi dòng máy, mọi tình trạng",
+    icon: "Layers",
   },
   {
     title: "Bảo mật thông tin",
     description: "Cam kết xóa sạch dữ liệu cá nhân trên thiết bị",
+    icon: "ShieldCheck",
   },
   {
     title: "Quy trình nhanh gọn",
     description: "Chỉ 30 phút để hoàn tất thủ tục thu mua",
+    icon: "Zap",
   },
 ]

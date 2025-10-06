@@ -3,19 +3,26 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect } from "react"
-import { Menu, X, Phone } from "lucide-react"
+import { Menu, X, Phone, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/data/site"
 
 const navigation = [
   { name: "Trang chủ", href: "/" },
-  { name: "Thu mua điện thoại", href: "/thu-mua-dien-thoai" },
-  { name: "Thu mua laptop", href: "/thu-mua-laptop" },
-  { name: "Liên hệ", href: "/lien-he" },
+]
+
+const services = [
+  { name: "Thu mua laptop gaming", href: "/dich-vu/thu-mua-laptop-gaming" },
+  { name: "Thu mua Macbook", href: "/dich-vu/thu-mua-macbook" },
+  { name: "Thu mua Surface", href: "/dich-vu/thu-mua-surface" },
+  { name: "Thu mua điện thoại", href: "/dich-vu/thu-mua-dien-thoai" },
+  { name: "Thu mua máy tính bảng", href: "/dich-vu/thu-mua-may-tinh-bang" },
+  { name: "Thu mua Android", href: "/dich-vu/thu-mua-android" },
 ]
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
 
   // Prevent body scroll when menu is open
   useEffect(() => {
@@ -39,7 +46,7 @@ export function Header() {
             <span className="text-xl font-bold text-green-700">{siteConfig.name}</span>
           </Link>
         </div>
-        <div className="hidden lg:flex lg:gap-x-8">
+        <div className="hidden lg:flex lg:gap-x-8 lg:items-center">
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -49,6 +56,39 @@ export function Header() {
               {item.name}
             </Link>
           ))}
+          <div className="relative group">
+            <button
+              className="text-sm font-semibold leading-6 text-foreground hover:text-green-700 transition-colors flex items-center gap-1"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
+              Dịch vụ
+              <ChevronDown className="h-4 w-4" />
+            </button>
+            {servicesOpen && (
+              <div 
+                className="absolute left-0 top-full mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
+                {services.map((service) => (
+                  <Link
+                    key={service.name}
+                    href={service.href}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-700 transition-colors"
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+          <Link
+            href="/lien-he"
+            className="text-sm font-semibold leading-6 text-foreground hover:text-green-700 transition-colors"
+          >
+            Liên hệ
+          </Link>
         </div>
         <div className="flex flex-1 items-center justify-end gap-x-4">
           <a
@@ -118,11 +158,37 @@ export function Header() {
               ))}
             </div>
 
+            {/* Services section */}
+            <div className="mt-4">
+              <h3 className="px-4 text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                Dịch vụ
+              </h3>
+              <div className="space-y-1">
+                {services.map((service) => (
+                  <Link
+                    key={service.name}
+                    href={service.href}
+                    className="block rounded-lg px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-700 transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             {/* Divider */}
             <div className="my-6 border-t border-gray-200"></div>
 
             {/* Contact section */}
             <div className="space-y-4">
+              <Link
+                href="/lien-he"
+                className="block rounded-lg px-4 py-3 text-base font-semibold text-gray-900 hover:bg-gray-50 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Liên hệ
+              </Link>
               <a
                 href={`tel:${siteConfig.phone}`}
                 className="flex items-center gap-2 rounded-lg px-4 py-3 text-base font-semibold text-green-700 hover:bg-gray-50 transition-colors"

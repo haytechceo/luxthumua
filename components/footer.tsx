@@ -44,21 +44,33 @@ export function Footer() {
             <h3 className="text-xs sm:text-sm font-semibold text-foreground mb-3 sm:mb-4">Dịch vụ</h3>
             <ul className="space-y-1.5 sm:space-y-2">
               <li>
-                <Link href="/thu-mua-dien-thoai" className="text-xs sm:text-sm text-muted-foreground hover:text-green-700">
+                <Link href="/dich-vu/thu-mua-laptop-gaming" className="text-xs sm:text-sm text-muted-foreground hover:text-green-700">
+                  Thu mua laptop gaming
+                </Link>
+              </li>
+              <li>
+                <Link href="/dich-vu/thu-mua-macbook" className="text-xs sm:text-sm text-muted-foreground hover:text-green-700">
+                  Thu mua Macbook
+                </Link>
+              </li>
+              <li>
+                <Link href="/dich-vu/thu-mua-surface" className="text-xs sm:text-sm text-muted-foreground hover:text-green-700">
+                  Thu mua Surface
+                </Link>
+              </li>
+              <li>
+                <Link href="/dich-vu/thu-mua-dien-thoai" className="text-xs sm:text-sm text-muted-foreground hover:text-green-700">
                   Thu mua điện thoại
                 </Link>
               </li>
               <li>
-                <Link href="/thu-mua-laptop" className="text-xs sm:text-sm text-muted-foreground hover:text-green-700">
-                  Thu mua laptop
+                <Link href="/dich-vu/thu-mua-may-tinh-bang" className="text-xs sm:text-sm text-muted-foreground hover:text-green-700">
+                  Thu mua máy tính bảng
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/dich-vu/thu-mua-may-tinh-cu"
-                  className="text-xs sm:text-sm text-muted-foreground hover:text-green-700"
-                >
-                  Thu mua máy tính
+                <Link href="/dich-vu/thu-mua-android" className="text-xs sm:text-sm text-muted-foreground hover:text-green-700">
+                  Thu mua Android
                 </Link>
               </li>
             </ul>

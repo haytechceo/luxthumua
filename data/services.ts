@@ -10,30 +10,38 @@ export interface Service {
 export const services: Service[] = [
   {
     id: "1",
-    title: "Thu mua máy tính cũ",
-    slug: "thu-mua-may-tinh-cu",
-    description: "Thu mua máy tính để bàn các loại, giá cao, thanh toán ngay",
-    image: "/images/services/computer.jpg",
-    detailSlug: "/dich-vu/thu-mua-may-tinh-cu",
+    title: "Thu mua laptop gaming",
+    slug: "thu-mua-laptop-gaming",
+    description: "Thu mua laptop gaming mọi hãng MSI, Asus ROG, Acer Predator, Dell Alienware. Giá cao nhất thị trường.",
+    image: "/images/services/laptop.jpg",
+    detailSlug: "/dich-vu/thu-mua-laptop-gaming",
   },
   {
     id: "2",
-    title: "Thu mua laptop cũ",
-    slug: "thu-mua-laptop-cu",
-    description: "Thu mua laptop mọi hãng Dell, HP, Asus, Lenovo, Macbook",
+    title: "Thu mua Macbook",
+    slug: "thu-mua-macbook",
+    description: "Thu mua Macbook Air, Macbook Pro mọi đời. Giá cao hơn thị trường 10-15%, thanh toán ngay.",
     image: "/images/services/laptop.jpg",
-    detailSlug: "/dich-vu/thu-mua-laptop-cu",
+    detailSlug: "/dich-vu/thu-mua-macbook",
   },
   {
     id: "3",
-    title: "Thu mua điện thoại cũ",
-    slug: "thu-mua-dien-thoai-cu",
-    description: "Thu mua điện thoại iPhone, Samsung, Oppo... giá tốt nhất",
-    image: "/images/services/phone.jpg",
-    detailSlug: "/dich-vu/thu-mua-dien-thoai-cu",
+    title: "Thu mua Surface",
+    slug: "thu-mua-surface",
+    description: "Thu mua Microsoft Surface Pro, Surface Laptop, Surface Book. Mọi tình trạng, giá tốt nhất.",
+    image: "/images/services/tablet.jpg",
+    detailSlug: "/dich-vu/thu-mua-surface",
   },
   {
     id: "4",
+    title: "Thu mua điện thoại",
+    slug: "thu-mua-dien-thoai",
+    description: "Thu mua điện thoại iPhone, Samsung, Oppo, Xiaomi. Mọi tình trạng, giá cao nhất thị trường.",
+    image: "/images/services/phone.jpg",
+    detailSlug: "/dich-vu/thu-mua-dien-thoai",
+  },
+  {
+    id: "5",
     title: "Thu mua máy tính bảng",
     slug: "thu-mua-may-tinh-bang",
     description: "Thu mua máy tính bảng iPad, Samsung Tab, Huawei MatePad. Giá cao, thanh toán nhanh.",
@@ -41,20 +49,12 @@ export const services: Service[] = [
     detailSlug: "/dich-vu/thu-mua-may-tinh-bang",
   },
   {
-    id: "5",
-    title: "Thu mua đồng hồ thông minh",
-    slug: "thu-mua-dong-ho-thong-minh",
-    description: "Thu mua đồng hồ thông minh Apple Watch, Samsung Galaxy Watch, Huawei Watch. Giá cao nhất.",
-    image: "/images/services/smartwatch.jpg",
-    detailSlug: "/dich-vu/thu-mua-dong-ho-thong-minh",
-  },
-  {
     id: "6",
-    title: "Thu mua phụ kiện công nghệ",
-    slug: "thu-mua-phu-kien-cong-nghe",
-    description: "Thu mua tai nghe AirPods, sạc dự phòng, bàn phím, chuột và các phụ kiện công nghệ khác.",
-    image: "/images/services/accessories.jpg",
-    detailSlug: "/dich-vu/thu-mua-phu-kien-cong-nghe",
+    title: "Thu mua Android",
+    slug: "thu-mua-android",
+    description: "Thu mua điện thoại Android Samsung, Xiaomi, Oppo, Vivo, Realme. Giá tốt, thanh toán nhanh.",
+    image: "/images/services/phone.jpg",
+    detailSlug: "/dich-vu/thu-mua-android",
   },
 ]
 
@@ -84,142 +84,219 @@ export interface DetailService {
 
 export const detailServices: DetailService[] = [
   {
-    slug: "thu-mua-may-tinh-cu",
-    title: "Thu mua máy tính cũ giá cao",
-    description: "Dịch vụ thu mua máy tính để bàn cũ mọi cấu hình, mọi tình trạng. Giá cao, thanh toán nhanh.",
+    slug: "thu-mua-laptop-gaming",
+    title: "Thu mua laptop gaming giá cao",
+    description: "Thu mua laptop gaming mọi hãng MSI, Asus ROG, Acer Predator, Dell Alienware, Lenovo Legion. Giá cao nhất thị trường.",
     longDescription:
-      "Chúng tôi chuyên thu mua máy tính để bàn cũ các loại từ văn phòng đến gaming, workstation. Với hơn 10 năm kinh nghiệm, chúng tôi cam kết mang đến giá thu mua cao nhất thị trường, quy trình nhanh chóng và minh bạch. Dù máy tính của bạn còn hoạt động tốt hay đã hỏng hóc, chúng tôi đều sẵn sàng thu mua với giá hợp lý nhất.",
-    image: "/images/services/computer.jpg",
-    metaTitle: "Thu mua máy tính cũ giá cao - PC văn phòng, gaming, workstation | LuxPhone",
-    metaDescription:
-      "Thu mua máy tính để bàn cũ mọi cấu hình, mọi tình trạng. Giá cao nhất thị trường, thu mua tận nhà, thanh toán ngay.",
-    keywords: [
-      "thu mua máy tính cũ",
-      "thu mua PC cũ",
-      "thu mua máy tính để bàn",
-      "bán máy tính cũ",
-      "thu mua máy tính gaming",
-    ],
-    features: [
-      "Thu mua mọi cấu hình từ thấp đến cao",
-      "Nhận máy tính hỏng, lỗi phần cứng",
-      "Định giá theo từng linh kiện",
-      "Thu mua tận nhà miễn phí",
-      "Thanh toán ngay sau thỏa thuận",
-      "Bảo mật dữ liệu tuyệt đối",
-    ],
-    process: [
-      {
-        title: "Liên hệ và mô tả cấu hình",
-        description: "Gọi hotline hoặc nhắn tin, cung cấp thông tin về cấu hình máy tính (CPU, RAM, Card đồ họa...)",
-      },
-      {
-        title: "Báo giá sơ bộ",
-        description: "Chúng tôi sẽ báo giá sơ bộ dựa trên thông tin bạn cung cấp",
-      },
-      {
-        title: "Kiểm tra và định giá chính xác",
-        description: "Nhân viên đến tận nơi kiểm tra máy và đưa ra mức giá chính xác",
-      },
-      {
-        title: "Thanh toán và bàn giao",
-        description: "Thỏa thuận giá, xóa dữ liệu và thanh toán ngay bằng tiền mặt hoặc chuyển khoản",
-      },
-    ],
-    priceRange: [
-      { model: "PC văn phòng cơ bản (i3, 4GB RAM)", price: "1.500.000 - 3.000.000" },
-      { model: "PC văn phòng cao cấp (i5, 8GB RAM)", price: "3.000.000 - 5.000.000" },
-      { model: "PC Gaming (i7, 16GB RAM, GTX 1660)", price: "8.000.000 - 12.000.000" },
-      { model: "PC Gaming cao cấp (i9, 32GB RAM, RTX 3070)", price: "15.000.000 - 25.000.000" },
-      { model: "Workstation (Xeon, 64GB RAM)", price: "20.000.000 - 40.000.000" },
-    ],
-    faqs: [
-      {
-        question: "Máy tính hỏng nguồn có thu mua không?",
-        answer:
-          "Có, chúng tôi vẫn thu mua máy tính hỏng nguồn. Giá sẽ tính theo các linh kiện còn hoạt động như CPU, RAM, Card đồ họa, ổ cứng.",
-      },
-      {
-        question: "Có thu mua từng linh kiện riêng lẻ không?",
-        answer:
-          "Có, chúng tôi nhận thu mua cả bộ máy tính hoàn chỉnh hoặc từng linh kiện riêng lẻ như CPU, RAM, Card đồ họa, mainboard.",
-      },
-      {
-        question: "Cần chuẩn bị gì khi bán máy tính?",
-        answer:
-          "Bạn chỉ cần chuẩn bị CMND/CCCD để xác nhận danh tính. Nếu còn hóa đơn mua hàng thì tốt, nhưng không bắt buộc.",
-      },
-    ],
-  },
-  {
-    slug: "thu-mua-laptop-cu",
-    title: "Thu mua laptop cũ giá cao",
-    description: "Thu mua laptop mọi hãng Dell, HP, Asus, Lenovo, Macbook. Mọi tình trạng, giá cao nhất.",
-    longDescription:
-      "Dịch vụ thu mua laptop cũ uy tín với giá cao nhất thị trường. Chúng tôi nhận thu mua mọi thương hiệu laptop từ phổ thông đến cao cấp, từ laptop văn phòng đến laptop gaming và Macbook. Đặc biệt, chúng tôi cam kết giá thu mua Macbook cao hơn thị trường 10-15%. Quy trình nhanh chóng, thu mua tận nhà miễn phí trong nội thành.",
+      "Chuyên thu mua laptop gaming với giá cao nhất thị trường. Chúng tôi nhận thu mua mọi dòng laptop gaming từ phổ thông đến cao cấp của các hãng MSI, Asus ROG, Acer Predator, Dell Alienware, Lenovo Legion, HP Omen. Dù máy còn mới hay đã qua sử dụng, cấu hình mạnh hay trung bình, chúng tôi đều sẵn sàng thu mua với giá hợp lý nhất. Quy trình nhanh chóng, thu mua tận nhà miễn phí.",
     image: "/images/services/laptop.jpg",
-    metaTitle: "Thu mua laptop cũ giá cao - Dell, HP, Asus, Lenovo, Macbook | LuxPhone",
+    metaTitle: "Thu mua laptop gaming giá cao - MSI, Asus ROG, Acer Predator, Alienware | LuxPhone",
     metaDescription:
-      "Thu mua laptop cũ mọi hãng, mọi tình trạng. Giá cao nhất thị trường, thu mua tận nhà, thanh toán nhanh.",
-    keywords: ["thu mua laptop cũ", "thu mua Macbook", "thu mua laptop Dell", "thu mua laptop HP", "bán laptop cũ"],
+      "Thu mua laptop gaming mọi hãng, mọi cấu hình. Giá cao nhất thị trường, thu mua tận nhà, thanh toán ngay.",
+    keywords: [
+      "thu mua laptop gaming",
+      "thu mua laptop MSI",
+      "thu mua Asus ROG",
+      "thu mua Acer Predator",
+      "thu mua Dell Alienware",
+      "bán laptop gaming cũ",
+    ],
     features: [
-      "Thu mua mọi thương hiệu laptop",
-      "Giá Macbook cao hơn thị trường 10-15%",
-      "Thu mua tận nhà miễn phí",
+      "Thu mua mọi dòng laptop gaming",
+      "Giá cao nhất cho laptop gaming cao cấp",
       "Nhận máy màn hình vỡ, pin chai",
+      "Thu mua tận nhà miễn phí",
       "Thanh toán ngay sau kiểm tra",
       "Xóa dữ liệu an toàn",
     ],
     process: [
       {
         title: "Liên hệ và cung cấp thông tin",
-        description: "Gọi hotline, cung cấp thông tin laptop (hãng, model, cấu hình, tình trạng)",
+        description: "Gọi hotline, cung cấp thông tin laptop gaming (hãng, model, CPU, RAM, VGA, tình trạng)",
       },
       {
-        title: "Hẹn lịch kiểm tra tận nơi",
-        description: "Nhân viên đến tận nhà/văn phòng để kiểm tra máy chi tiết",
+        title: "Báo giá sơ bộ",
+        description: "Chúng tôi báo giá sơ bộ dựa trên cấu hình và tình trạng máy",
       },
       {
-        title: "Định giá và thanh toán",
-        description: "Thỏa thuận giá, xóa dữ liệu và thanh toán ngay",
+        title: "Kiểm tra tận nơi",
+        description: "Nhân viên đến tận nhà kiểm tra máy chi tiết, test hiệu năng",
+      },
+      {
+        title: "Thanh toán ngay",
+        description: "Thỏa thuận giá, xóa dữ liệu và thanh toán ngay bằng tiền mặt hoặc chuyển khoản",
       },
     ],
     priceRange: [
-      { model: "Laptop văn phòng cơ bản (i3, 4GB)", price: "2.000.000 - 4.000.000" },
-      { model: "Laptop văn phòng cao cấp (i5, 8GB)", price: "5.000.000 - 8.000.000" },
-      { model: "Laptop gaming (i7, 16GB, GTX 1650)", price: "10.000.000 - 15.000.000" },
-      { model: "Macbook Air M1", price: "15.000.000 - 18.000.000" },
-      { model: "Macbook Pro M1/M2", price: "20.000.000 - 35.000.000" },
+      { model: "Laptop gaming phổ thông (i5, GTX 1650)", price: "8.000.000 - 12.000.000" },
+      { model: "Laptop gaming tầm trung (i7, RTX 3050)", price: "12.000.000 - 18.000.000" },
+      { model: "Laptop gaming cao cấp (i7, RTX 3060)", price: "18.000.000 - 25.000.000" },
+      { model: "Laptop gaming high-end (i9, RTX 3070)", price: "25.000.000 - 35.000.000" },
+      { model: "Laptop gaming top (i9, RTX 4080/4090)", price: "35.000.000 - 55.000.000" },
     ],
     faqs: [
       {
-        question: "Laptop màn hình vỡ có thu mua không?",
+        question: "Laptop gaming màn hình vỡ có thu mua không?",
         answer:
-          "Có, chúng tôi nhận thu mua laptop màn hình vỡ. Giá sẽ thấp hơn máy nguyên zin tùy mức độ vỡ và khả năng hoạt động.",
+          "Có, chúng tôi nhận thu mua laptop gaming màn hình vỡ. Giá sẽ giảm tùy mức độ vỡ và chi phí thay màn hình.",
       },
       {
-        question: "Laptop pin chai có ảnh hưởng đến giá không?",
+        question: "Card đồ họa yếu có ảnh hưởng nhiều đến giá không?",
         answer:
-          "Có ảnh hưởng nhưng không nhiều. Chúng tôi sẽ trừ chi phí thay pin mới vào giá thu mua, thường khoảng 500.000 - 1.500.000đ tùy model.",
+          "Có, card đồ họa là yếu tố quan trọng ảnh hưởng đến giá laptop gaming. Chúng tôi định giá dựa trên cấu hình tổng thể.",
+      },
+      {
+        question: "Laptop gaming pin chai có thu mua không?",
+        answer:
+          "Có, chúng tôi vẫn thu mua. Pin chai là tình trạng phổ biến của laptop gaming, giá sẽ trừ chi phí thay pin.",
       },
     ],
   },
   {
-    slug: "thu-mua-dien-thoai-cu",
-    title: "Thu mua điện thoại cũ giá cao",
-    description: "Thu mua điện thoại iPhone, Samsung, Oppo, Xiaomi. Mọi tình trạng, giá cao nhất thị trường.",
+    slug: "thu-mua-macbook",
+    title: "Thu mua Macbook giá cao",
+    description: "Thu mua Macbook Air, Macbook Pro mọi đời M1, M2, M3. Giá cao hơn thị trường 10-15%, thanh toán ngay.",
     longDescription:
-      "Chuyên thu mua điện thoại cũ mọi hãng với giá cao nhất thị trường. Chúng tôi nhận thu mua iPhone, Samsung, Oppo, Xiaomi và các hãng khác dù máy còn hoạt động tốt hay đã hỏng hóc. Quy trình nhanh chóng chỉ 15-20 phút, thanh toán ngay, bảo mật dữ liệu tuyệt đối.",
-    image: "/images/services/phone.jpg",
-    metaTitle: "Thu mua điện thoại cũ giá cao - iPhone, Samsung, Oppo, Xiaomi | LuxPhone",
+      "Dịch vụ thu mua Macbook uy tín với giá cao nhất thị trường. Chúng tôi chuyên thu mua Macbook Air, Macbook Pro các đời từ Intel đến chip M1, M2, M3. Cam kết giá thu mua cao hơn thị trường 10-15%, quy trình nhanh chóng chỉ 15-20 phút. Thu mua tận nhà miễn phí, thanh toán ngay bằng tiền mặt hoặc chuyển khoản. Đặc biệt ưu tiên Macbook còn nguyên seal, fullbox.",
+    image: "/images/services/laptop.jpg",
+    metaTitle: "Thu mua Macbook giá cao - Air, Pro M1 M2 M3 | LuxPhone",
     metaDescription:
-      "Thu mua điện thoại cũ mọi hãng, mọi tình trạng. Giá cao nhất thị trường, thanh toán nhanh trong 15 phút.",
+      "Thu mua Macbook Air, Pro mọi đời. Giá cao hơn thị trường 10-15%, thu mua tận nhà, thanh toán nhanh.",
     keywords: [
-      "thu mua điện thoại cũ",
+      "thu mua Macbook",
+      "thu mua Macbook Air",
+      "thu mua Macbook Pro",
+      "thu mua Macbook M1",
+      "thu mua Macbook M2",
+      "bán Macbook cũ",
+    ],
+    features: [
+      "Giá cao hơn thị trường 10-15%",
+      "Thu mua mọi đời Macbook",
+      "Ưu tiên máy fullbox, nguyên seal",
+      "Nhận máy màn hình vỡ, pin chai",
+      "Thu mua tận nhà miễn phí",
+      "Thanh toán nhanh 15-20 phút",
+    ],
+    process: [
+      {
+        title: "Liên hệ và mô tả Macbook",
+        description: "Gọi hotline, cung cấp thông tin Macbook (model, năm sản xuất, cấu hình, tình trạng)",
+      },
+      {
+        title: "Báo giá ngay",
+        description: "Chúng tôi báo giá cụ thể dựa trên thông tin bạn cung cấp",
+      },
+      {
+        title: "Kiểm tra và thanh toán",
+        description: "Nhân viên đến tận nơi kiểm tra máy, thỏa thuận giá và thanh toán ngay",
+      },
+    ],
+    priceRange: [
+      { model: "Macbook Air M1 (8GB/256GB)", price: "15.000.000 - 18.000.000" },
+      { model: "Macbook Air M2 (8GB/256GB)", price: "20.000.000 - 24.000.000" },
+      { model: "Macbook Pro M1 13 inch", price: "22.000.000 - 26.000.000" },
+      { model: "Macbook Pro M2 14 inch", price: "30.000.000 - 38.000.000" },
+      { model: "Macbook Pro M3 Max 16 inch", price: "55.000.000 - 75.000.000" },
+    ],
+    faqs: [
+      {
+        question: "Macbook màn hình vỡ có thu mua không?",
+        answer:
+          "Có, chúng tôi nhận thu mua Macbook màn hình vỡ. Giá sẽ giảm tùy mức độ vỡ và chi phí thay màn hình.",
+      },
+      {
+        question: "Macbook Intel có thu mua không?",
+        answer:
+          "Có, chúng tôi thu mua cả Macbook Intel và Macbook chip M. Giá Macbook M sẽ cao hơn do hiệu năng tốt hơn.",
+      },
+      {
+        question: "Macbook không có hóa đơn có thu mua không?",
+        answer:
+          "Có, chúng tôi vẫn thu mua. Tuy nhiên, giá sẽ cao hơn nếu bạn có đầy đủ hóa đơn, hộp và phụ kiện.",
+      },
+    ],
+  },
+  {
+    slug: "thu-mua-surface",
+    title: "Thu mua Microsoft Surface giá cao",
+    description: "Thu mua Microsoft Surface Pro, Surface Laptop, Surface Book, Surface Go. Mọi tình trạng, giá tốt nhất.",
+    longDescription:
+      "Chuyên thu mua Microsoft Surface các dòng với giá cao nhất thị trường. Chúng tôi nhận thu mua Surface Pro, Surface Laptop, Surface Book, Surface Go mọi thế hệ. Dù máy còn mới hay đã qua sử dụng, màn hình nguyên zin hay có trầy xước, chúng tôi đều sẵn sàng thu mua. Quy trình nhanh chóng, thu mua tận nhà miễn phí trong nội thành.",
+    image: "/images/services/tablet.jpg",
+    metaTitle: "Thu mua Microsoft Surface giá cao - Pro, Laptop, Book, Go | LuxPhone",
+    metaDescription:
+      "Thu mua Microsoft Surface mọi dòng, mọi tình trạng. Giá cao nhất thị trường, thu mua tận nhà, thanh toán nhanh.",
+    keywords: [
+      "thu mua Surface",
+      "thu mua Surface Pro",
+      "thu mua Surface Laptop",
+      "thu mua Surface Book",
+      "bán Surface cũ",
+    ],
+    features: [
+      "Thu mua mọi dòng Surface",
+      "Giá cao cho Surface mới",
+      "Nhận máy màn hình vỡ, pin chai",
+      "Thu mua cả bút Surface Pen",
+      "Thu mua tận nhà miễn phí",
+      "Thanh toán ngay sau kiểm tra",
+    ],
+    process: [
+      {
+        title: "Liên hệ và mô tả Surface",
+        description: "Gọi hotline, cung cấp thông tin Surface (model, cấu hình, tình trạng, có bút không)",
+      },
+      {
+        title: "Báo giá sơ bộ",
+        description: "Chúng tôi báo giá dựa trên thông tin và tình trạng máy",
+      },
+      {
+        title: "Kiểm tra và thanh toán",
+        description: "Nhân viên đến tận nơi kiểm tra máy chi tiết, thỏa thuận giá và thanh toán ngay",
+      },
+    ],
+    priceRange: [
+      { model: "Surface Go 3", price: "6.000.000 - 9.000.000" },
+      { model: "Surface Pro 7/8", price: "12.000.000 - 18.000.000" },
+      { model: "Surface Pro 9", price: "18.000.000 - 25.000.000" },
+      { model: "Surface Laptop 5", price: "15.000.000 - 22.000.000" },
+      { model: "Surface Book 3", price: "20.000.000 - 30.000.000" },
+    ],
+    faqs: [
+      {
+        question: "Surface màn hình vỡ có thu mua không?",
+        answer:
+          "Có, chúng tôi nhận thu mua Surface màn hình vỡ. Giá sẽ giảm tùy mức độ vỡ và chi phí sửa chữa.",
+      },
+      {
+        question: "Surface không có bút có thu mua không?",
+        answer:
+          "Có, chúng tôi vẫn thu mua. Tuy nhiên, giá sẽ cao hơn nếu có đầy đủ bút Surface Pen và phụ kiện.",
+      },
+      {
+        question: "Surface pin chai có thu mua không?",
+        answer:
+          "Có, chúng tôi vẫn thu mua. Giá sẽ trừ chi phí thay pin, thường khoảng 1.000.000 - 2.000.000đ.",
+      },
+    ],
+  },
+  {
+    slug: "thu-mua-dien-thoai",
+    title: "Thu mua điện thoại giá cao",
+    description: "Thu mua điện thoại iPhone, Samsung, Oppo, Xiaomi, Vivo, Realme. Mọi tình trạng, giá cao nhất thị trường.",
+    longDescription:
+      "Chuyên thu mua điện thoại mọi hãng với giá cao nhất thị trường. Chúng tôi nhận thu mua iPhone, Samsung, Oppo, Xiaomi, Vivo, Realme và các hãng khác dù máy còn hoạt động tốt hay đã hỏng hóc. Quy trình nhanh chóng chỉ 15-20 phút, thanh toán ngay, bảo mật dữ liệu tuyệt đối. Thu mua tận nơi miễn phí trong nội thành Hà Nội và TP.HCM.",
+    image: "/images/services/phone.jpg",
+    metaTitle: "Thu mua điện thoại giá cao - iPhone, Samsung, Oppo, Xiaomi | LuxPhone",
+    metaDescription:
+      "Thu mua điện thoại mọi hãng, mọi tình trạng. Giá cao nhất thị trường, thanh toán nhanh trong 15 phút.",
+    keywords: [
+      "thu mua điện thoại",
       "thu mua iPhone",
       "thu mua Samsung",
+      "thu mua điện thoại cũ",
       "bán điện thoại cũ",
-      "thu mua điện thoại giá cao",
     ],
     features: [
       "Thu mua mọi thương hiệu điện thoại",
@@ -244,12 +321,12 @@ export const detailServices: DetailService[] = [
       },
     ],
     priceRange: [
-      { model: "iPhone 15 Pro Max", price: "26.000.000 - 30.000.000" },
-      { model: "iPhone 15", price: "18.000.000 - 22.000.000" },
-      { model: "iPhone 14", price: "15.000.000 - 18.000.000" },
+      { model: "iPhone 15 Pro Max", price: "26.000.000 - 32.000.000" },
+      { model: "iPhone 15/15 Plus", price: "18.000.000 - 24.000.000" },
+      { model: "iPhone 14 Pro Max", price: "22.000.000 - 26.000.000" },
       { model: "iPhone 13", price: "12.000.000 - 15.000.000" },
-      { model: "Samsung S24 Ultra", price: "22.000.000 - 26.000.000" },
-      { model: "Samsung S23", price: "13.000.000 - 16.000.000" },
+      { model: "Samsung S24 Ultra", price: "22.000.000 - 28.000.000" },
+      { model: "Samsung S23", price: "13.000.000 - 17.000.000" },
     ],
     faqs: [
       {
@@ -323,91 +400,69 @@ export const detailServices: DetailService[] = [
     ],
   },
   {
-    slug: "thu-mua-dong-ho-thong-minh",
-    title: "Thu mua đồng hồ thông minh Apple Watch, Samsung Watch",
-    description: "Thu mua đồng hồ thông minh Apple Watch, Samsung Galaxy Watch, Huawei Watch. Giá cao nhất.",
+    slug: "thu-mua-android",
+    title: "Thu mua điện thoại Android giá cao",
+    description: "Thu mua điện thoại Android Samsung, Xiaomi, Oppo, Vivo, Realme. Giá tốt, thanh toán nhanh.",
     longDescription:
-      "Chuyên thu mua đồng hồ thông minh các hãng với giá cao nhất thị trường. Chúng tôi nhận thu mua Apple Watch mọi series, Samsung Galaxy Watch, Huawei Watch và các dòng smartwatch khác. Dù đồng hồ còn mới hay đã qua sử dụng, màn hình nguyên zin hay có trầy xước, chúng tôi đều sẵn sàng thu mua.",
-    image: "/images/services/smartwatch.jpg",
-    metaTitle: "Thu mua đồng hồ thông minh Apple Watch, Samsung Watch giá cao | LuxPhone",
+      "Chuyên thu mua điện thoại Android các hãng với giá cao nhất thị trường. Chúng tôi nhận thu mua Samsung, Xiaomi, Oppo, Vivo, Realme, OnePlus và các hãng Android khác. Dù máy cũ hay mới, màn hình nguyên zin hay có trầy xước, chúng tôi đều sẵn sàng thu mua với giá hợp lý. Quy trình nhanh chóng 15-20 phút, thanh toán ngay, thu mua tận nhà miễn phí.",
+    image: "/images/services/phone.jpg",
+    metaTitle: "Thu mua điện thoại Android giá cao - Samsung, Xiaomi, Oppo, Vivo | LuxPhone",
     metaDescription:
-      "Thu mua đồng hồ thông minh Apple Watch, Samsung Galaxy Watch, Huawei Watch. Giá cao, thanh toán nhanh.",
+      "Thu mua điện thoại Android mọi hãng, mọi tình trạng. Giá cao nhất thị trường, thanh toán nhanh trong 15 phút.",
     keywords: [
-      "thu mua Apple Watch",
-      "thu mua Samsung Watch",
-      "thu mua đồng hồ thông minh",
-      "bán Apple Watch cũ",
-      "thu mua smartwatch",
+      "thu mua Android",
+      "thu mua Samsung",
+      "thu mua Xiaomi",
+      "thu mua Oppo",
+      "thu mua Vivo",
+      "bán điện thoại Android",
     ],
     features: [
-      "Thu mua mọi dòng smartwatch",
-      "Giá Apple Watch cao nhất",
-      "Nhận máy trầy xước, pin yếu",
-      "Thanh toán ngay tại chỗ",
-      "Kiểm tra kỹ lưỡng",
-      "Bảo mật thông tin",
+      "Thu mua mọi hãng Android",
+      "Giá cao cho máy flagship",
+      "Nhận máy màn hình vỡ, hỏng nguồn",
+      "Thanh toán nhanh 15-20 phút",
+      "Thu mua tận nhà miễn phí",
+      "Bảo mật dữ liệu tuyệt đối",
     ],
     process: [
       {
-        title: "Liên hệ và mô tả đồng hồ",
-        description: "Gọi hotline, cung cấp thông tin về đồng hồ (model, size, tình trạng)",
+        title: "Liên hệ và tư vấn",
+        description: "Gọi hotline hoặc nhắn tin để được tư vấn và báo giá sơ bộ cho điện thoại Android",
       },
       {
-        title: "Báo giá sơ bộ",
-        description: "Chúng tôi báo giá sơ bộ dựa trên thông tin bạn cung cấp",
+        title: "Kiểm tra máy",
+        description: "Nhân viên đến tận nơi hoặc bạn mang máy đến cửa hàng để kiểm tra chi tiết",
       },
       {
-        title: "Kiểm tra và thanh toán",
-        description: "Kiểm tra đồng hồ chi tiết, thỏa thuận giá và thanh toán ngay",
+        title: "Thanh toán ngay",
+        description: "Thỏa thuận giá, xóa dữ liệu và thanh toán ngay bằng tiền mặt hoặc chuyển khoản",
       },
     ],
     priceRange: [
-      { model: "Apple Watch Ultra 2", price: "15.000.000 - 18.000.000" },
-      { model: "Apple Watch Series 9", price: "8.000.000 - 12.000.000" },
-      { model: "Apple Watch SE 2", price: "4.000.000 - 6.000.000" },
-      { model: "Samsung Galaxy Watch 6", price: "5.000.000 - 8.000.000" },
-      { model: "Huawei Watch GT 4", price: "3.000.000 - 5.000.000" },
+      { model: "Samsung S24 Ultra", price: "22.000.000 - 28.000.000" },
+      { model: "Samsung S23", price: "13.000.000 - 17.000.000" },
+      { model: "Samsung Fold 5", price: "25.000.000 - 32.000.000" },
+      { model: "Xiaomi 14", price: "12.000.000 - 16.000.000" },
+      { model: "Oppo Find N3", price: "15.000.000 - 20.000.000" },
+      { model: "Vivo X100 Pro", price: "18.000.000 - 23.000.000" },
     ],
-  },
-  {
-    slug: "thu-mua-phu-kien-cong-nghe",
-    title: "Thu mua phụ kiện công nghệ",
-    description: "Thu mua tai nghe AirPods, sạc dự phòng, bàn phím, chuột và các phụ kiện công nghệ khác.",
-    longDescription:
-      "Dịch vụ thu mua phụ kiện công nghệ chính hãng với giá hợp lý. Chúng tôi nhận thu mua tai nghe AirPods, tai nghe Sony/Bose, sạc dự phòng, bàn phím cơ, chuột gaming và nhiều phụ kiện công nghệ khác. Đặc biệt ưu tiên các sản phẩm chính hãng, còn nguyên hộp hoặc tình trạng tốt.",
-    image: "/images/services/accessories.jpg",
-    metaTitle: "Thu mua phụ kiện công nghệ - AirPods, tai nghe, sạc dự phòng | LuxPhone",
-    metaDescription:
-      "Thu mua phụ kiện công nghệ chính hãng: AirPods, tai nghe Sony/Bose, sạc dự phòng, bàn phím, chuột. Giá tốt.",
-    keywords: ["thu mua AirPods", "thu mua tai nghe", "thu mua phụ kiện", "bán AirPods cũ", "thu mua sạc dự phòng"],
-    features: [
-      "Thu mua phụ kiện chính hãng",
-      "Giá hợp lý, minh bạch",
-      "Kiểm tra kỹ lưỡng",
-      "Thanh toán nhanh chóng",
-      "Nhận hàng tại chỗ",
-      "Tư vấn nhiệt tình",
-    ],
-    process: [
+    faqs: [
       {
-        title: "Liên hệ và mô tả sản phẩm",
-        description: "Gọi hotline, cung cấp thông tin về phụ kiện (loại, hãng, tình trạng)",
+        question: "Điện thoại Android màn hình vỡ có thu mua không?",
+        answer:
+          "Có, chúng tôi nhận thu mua điện thoại Android màn hình vỡ. Giá sẽ thấp hơn máy nguyên zin tùy mức độ vỡ.",
       },
       {
-        title: "Báo giá",
-        description: "Chúng tôi báo giá dựa trên thông tin và tình trạng sản phẩm",
+        question: "Máy Android cũ nhiều năm có thu mua không?",
+        answer:
+          "Có, chúng tôi vẫn thu mua điện thoại Android cũ. Tuy nhiên, giá sẽ phụ thuộc vào model, tình trạng và thời gian sử dụng.",
       },
       {
-        title: "Giao dịch",
-        description: "Kiểm tra sản phẩm, thỏa thuận giá và thanh toán",
+        question: "Máy Android hỏng nguồn có thu mua không?",
+        answer:
+          "Có, chúng tôi vẫn thu mua máy hỏng nguồn. Giá sẽ tính theo các linh kiện còn hoạt động như màn hình, camera, pin.",
       },
-    ],
-    priceRange: [
-      { model: "AirPods Pro 2", price: "3.500.000 - 4.500.000" },
-      { model: "AirPods 3", price: "2.500.000 - 3.200.000" },
-      { model: "Sony WH-1000XM5", price: "5.000.000 - 7.000.000" },
-      { model: "Bàn phím cơ (Keychron, Leopold)", price: "1.500.000 - 3.000.000" },
-      { model: "Chuột gaming (Logitech, Razer)", price: "800.000 - 2.000.000" },
     ],
   },
 ]
