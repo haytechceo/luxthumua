@@ -1,10 +1,10 @@
-import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ServiceCard } from "@/components/service-card"
 import { BenefitCard } from "@/components/benefit-card"
 import { ContactForm } from "@/components/contact-form"
 import { StructuredData } from "@/components/structured-data"
+import { BannerSlider } from "@/components/banner-slider"
 import { getArticleSchema } from "@/lib/structured-data"
 import { benefits, whyChooseUs } from "@/data/site"
 import { services } from "@/data/services"
@@ -34,39 +34,8 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       <StructuredData data={articleSchema} />
-      {/* Hero Section */}
-      <section className="relative h-[400px] sm:h-[500px] lg:h-[600px] w-full overflow-hidden">
-        <Image
-          src="/images/banner.jpg"
-          alt="Thu mua điện thoại laptop cũ"
-          fill
-          priority
-          className="object-cover brightness-50"
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-4 sm:mb-6">
-              Thu mua điện thoại, laptop cũ
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Giá cao nhất thị trường - Thu mua tận nhà - Thanh toán ngay
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
-              <Button asChild size="lg" className="w-full sm:w-auto bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold">
-                <Link href="#contact-form">Nhận báo giá ngay</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="w-full sm:w-auto bg-white/10 text-white border-white hover:bg-white/20"
-              >
-                <Link href="/lien-he">Liên hệ tư vấn</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section - Banner Slider */}
+      <BannerSlider />
 
       {/* Benefits Section */}
       <section className="py-12 sm:py-16 bg-background">
