@@ -13,7 +13,7 @@ export const services: Service[] = [
     title: "Thu mua laptop gaming",
     slug: "thu-mua-laptop-gaming",
     description: "Thu mua laptop gaming mọi hãng MSI, Asus ROG, Acer Predator, Dell Alienware. Giá cao nhất thị trường.",
-    image: "/images/services/laptopgame.png",
+    image: "/images/services/1.png",
     detailSlug: "/dich-vu/thu-mua-laptop-gaming",
   },
   {
@@ -21,7 +21,7 @@ export const services: Service[] = [
     title: "Thu mua Macbook",
     slug: "thu-mua-macbook",
     description: "Thu mua Macbook Air, Macbook Pro mọi đời. Giá cao hơn thị trường 10-15%, thanh toán ngay.",
-    image: "/images/services/mac.png",
+    image: "/images/services/2.png",
     detailSlug: "/dich-vu/thu-mua-macbook",
   },
   {
@@ -29,7 +29,7 @@ export const services: Service[] = [
     title: "Thu mua Surface",
     slug: "thu-mua-surface",
     description: "Thu mua Microsoft Surface Pro, Surface Laptop, Surface Book. Mọi tình trạng, giá tốt nhất.",
-    image: "/images/services/surface.png",
+    image: "/images/services/3.png",
     detailSlug: "/dich-vu/thu-mua-surface",
   },
   {
@@ -37,7 +37,7 @@ export const services: Service[] = [
     title: "Thu mua điện thoại",
     slug: "thu-mua-dien-thoai",
     description: "Thu mua điện thoại iPhone, Samsung, Oppo, Xiaomi. Mọi tình trạng, giá cao nhất thị trường.",
-    image: "/images/services/dien-thoai.jpg",
+    image: "/images/services/4.png",
     detailSlug: "/dich-vu/thu-mua-dien-thoai",
   },
   {
@@ -45,7 +45,7 @@ export const services: Service[] = [
     title: "Thu mua máy tính bảng",
     slug: "thu-mua-may-tinh-bang",
     description: "Thu mua máy tính bảng iPad, Samsung Tab, Huawei MatePad. Giá cao, thanh toán nhanh.",
-    image: "/images/services/table.png",
+    image: "/images/services/5.png",
     detailSlug: "/dich-vu/thu-mua-may-tinh-bang",
   },
   {
@@ -53,7 +53,7 @@ export const services: Service[] = [
     title: "Thu mua Android",
     slug: "thu-mua-android",
     description: "Thu mua điện thoại Android Samsung, Xiaomi, Oppo, Vivo, Realme. Giá tốt, thanh toán nhanh.",
-    image: "/images/services/android.png",
+    image: "/images/services/6.png",
     detailSlug: "/dich-vu/thu-mua-android",
   },
 ]
@@ -89,7 +89,7 @@ export const detailServices: DetailService[] = [
     description: "Thu mua laptop gaming mọi hãng MSI, Asus ROG, Acer Predator, Dell Alienware, Lenovo Legion. Giá cao nhất thị trường.",
     longDescription:
       "Chuyên thu mua laptop gaming với giá cao nhất thị trường. Chúng tôi nhận thu mua mọi dòng laptop gaming từ phổ thông đến cao cấp của các hãng MSI, Asus ROG, Acer Predator, Dell Alienware, Lenovo Legion, HP Omen. Dù máy còn mới hay đã qua sử dụng, cấu hình mạnh hay trung bình, chúng tôi đều sẵn sàng thu mua với giá hợp lý nhất. Quy trình nhanh chóng, thu mua tận nhà miễn phí.",
-    image: "/images/services/laptopgame.png",
+    image: "/images/services/1.png",
     metaTitle: "Thu mua laptop gaming giá cao - MSI, Asus ROG, Acer Predator, Alienware | LuxPhone",
     metaDescription:
       "Thu mua laptop gaming mọi hãng, mọi cấu hình. Giá cao nhất thị trường, thu mua tận nhà, thanh toán ngay.",
@@ -158,7 +158,7 @@ export const detailServices: DetailService[] = [
     description: "Thu mua Macbook Air, Macbook Pro mọi đời M1, M2, M3. Giá cao hơn thị trường 10-15%, thanh toán ngay.",
     longDescription:
       "Dịch vụ thu mua Macbook uy tín với giá cao nhất thị trường. Chúng tôi chuyên thu mua Macbook Air, Macbook Pro các đời từ Intel đến chip M1, M2, M3. Cam kết giá thu mua cao hơn thị trường 10-15%, quy trình nhanh chóng chỉ 15-20 phút. Thu mua tận nhà miễn phí, thanh toán ngay bằng tiền mặt hoặc chuyển khoản. Đặc biệt ưu tiên Macbook còn nguyên seal, fullbox.",
-    image: "/images/services/laptopgame.png",
+    image: "/images/services/2.png",
     metaTitle: "Thu mua Macbook giá cao - Air, Pro M1 M2 M3 | LuxPhone",
     metaDescription:
       "Thu mua Macbook Air, Pro mọi đời. Giá cao hơn thị trường 10-15%, thu mua tận nhà, thanh toán nhanh.",
@@ -223,7 +223,7 @@ export const detailServices: DetailService[] = [
     description: "Thu mua Microsoft Surface Pro, Surface Laptop, Surface Book, Surface Go. Mọi tình trạng, giá tốt nhất.",
     longDescription:
       "Chuyên thu mua Microsoft Surface các dòng với giá cao nhất thị trường. Chúng tôi nhận thu mua Surface Pro, Surface Laptop, Surface Book, Surface Go mọi thế hệ. Dù máy còn mới hay đã qua sử dụng, màn hình nguyên zin hay có trầy xước, chúng tôi đều sẵn sàng thu mua. Quy trình nhanh chóng, thu mua tận nhà miễn phí trong nội thành.",
-    image: "/images/services/tablet.jpg",
+    image: "/images/services/3.png",
     metaTitle: "Thu mua Microsoft Surface giá cao - Pro, Laptop, Book, Go | LuxPhone",
     metaDescription:
       "Thu mua Microsoft Surface mọi dòng, mọi tình trạng. Giá cao nhất thị trường, thu mua tận nhà, thanh toán nhanh.",
@@ -287,7 +287,7 @@ export const detailServices: DetailService[] = [
     description: "Thu mua điện thoại iPhone, Samsung, Oppo, Xiaomi, Vivo, Realme. Mọi tình trạng, giá cao nhất thị trường.",
     longDescription:
       "Chuyên thu mua điện thoại mọi hãng với giá cao nhất thị trường. Chúng tôi nhận thu mua iPhone, Samsung, Oppo, Xiaomi, Vivo, Realme và các hãng khác dù máy còn hoạt động tốt hay đã hỏng hóc. Quy trình nhanh chóng chỉ 15-20 phút, thanh toán ngay, bảo mật dữ liệu tuyệt đối. Thu mua tận nơi miễn phí trong nội thành Hà Nội và TP.HCM.",
-    image: "/images/services/android.png",
+    image: "/images/services/4.png",
     metaTitle: "Thu mua điện thoại giá cao - iPhone, Samsung, Oppo, Xiaomi | LuxPhone",
     metaDescription:
       "Thu mua điện thoại mọi hãng, mọi tình trạng. Giá cao nhất thị trường, thanh toán nhanh trong 15 phút.",
@@ -352,7 +352,7 @@ export const detailServices: DetailService[] = [
     description: "Thu mua máy tính bảng iPad, Samsung Tab, Huawei MatePad. Giá cao, thanh toán nhanh.",
     longDescription:
       "Dịch vụ thu mua máy tính bảng uy tín với giá cao nhất thị trường. Chúng tôi chuyên thu mua iPad các đời, Samsung Galaxy Tab, Huawei MatePad và các dòng tablet khác. Dù máy còn mới hay đã qua sử dụng, màn hình nguyên zin hay đã thay thế, chúng tôi đều sẵn sàng thu mua với giá hợp lý nhất.",
-    image: "/images/services/tablet.jpg",
+    image: "/images/services/5.png",
     metaTitle: "Thu mua máy tính bảng iPad, Samsung Tab giá cao | LuxPhone",
     metaDescription:
       "Thu mua máy tính bảng iPad, Samsung Tab, Huawei MatePad. Mọi tình trạng, giá cao, thanh toán nhanh.",
@@ -405,7 +405,7 @@ export const detailServices: DetailService[] = [
     description: "Thu mua điện thoại Android Samsung, Xiaomi, Oppo, Vivo, Realme. Giá tốt, thanh toán nhanh.",
     longDescription:
       "Chuyên thu mua điện thoại Android các hãng với giá cao nhất thị trường. Chúng tôi nhận thu mua Samsung, Xiaomi, Oppo, Vivo, Realme, OnePlus và các hãng Android khác. Dù máy cũ hay mới, màn hình nguyên zin hay có trầy xước, chúng tôi đều sẵn sàng thu mua với giá hợp lý. Quy trình nhanh chóng 15-20 phút, thanh toán ngay, thu mua tận nhà miễn phí.",
-    image: "/images/services/android.png",
+    image: "/images/services/6.png",
     metaTitle: "Thu mua điện thoại Android giá cao - Samsung, Xiaomi, Oppo, Vivo | LuxPhone",
     metaDescription:
       "Thu mua điện thoại Android mọi hãng, mọi tình trạng. Giá cao nhất thị trường, thanh toán nhanh trong 15 phút.",

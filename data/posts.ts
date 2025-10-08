@@ -12,7 +12,7 @@ export const posts: Post[] = [
     slug: "thu-mua-may-tinh-cu",
     title: "Dịch vụ thu mua máy tính cũ giá cao tại Hà Nội",
     description: "Thu mua máy tính để bàn cũ mọi cấu hình, mọi tình trạng. Định giá minh bạch, thanh toán nhanh chóng.",
-    image: "/images/posts/may-tinh-detail.jpg",
+    image: "/images/posts/1.jpg",
     toc: [
       { id: "gioi-thieu", title: "Giới thiệu dịch vụ" },
       { id: "quy-trinh", title: "Quy trình thu mua" },
@@ -86,7 +86,7 @@ Chúng tôi cam kết mang đến dịch vụ thu mua máy tính cũ uy tín, gi
     title: "Thu mua laptop cũ giá cao - Mọi hãng, mọi tình trạng",
     description:
       "Dịch vụ thu mua laptop cũ uy tín tại Hà Nội. Thu mua laptop Dell, HP, Asus, Lenovo, Macbook... Định giá minh bạch, thu mua tận nơi.",
-    image: "/images/posts/laptop-detail.jpg",
+    image: "/images/posts/1.png",
     toc: [
       { id: "gioi-thieu", title: "Giới thiệu" },
       { id: "thuong-hieu", title: "Thương hiệu thu mua" },
@@ -196,7 +196,7 @@ Toàn bộ quy trình chỉ mất 20-30 phút. Nhanh chóng, tiện lợi, khôn
     title: "Thu mua điện thoại cũ giá cao - iPhone, Samsung, Oppo...",
     description:
       "Dịch vụ thu mua điện thoại cũ uy tín tại Hà Nội và TP.HCM. Thu mua iPhone, Samsung, Oppo, Xiaomi... Giá cao, thanh toán nhanh.",
-    image: "/images/posts/dien-thoai-detail.jpg",
+    image: "/images/posts/4.jpg",
     toc: [
       { id: "gioi-thieu", title: "Giới thiệu" },
       { id: "bang-gia", title: "Bảng giá tham khảo" },
