@@ -6,6 +6,7 @@ import { useState, useEffect } from "react"
 import { Menu, X, Phone, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/data/site"
+import { trackNavigationClick, trackPhoneClick } from "@/lib/analytics"
 
 const navigation = [
   { name: "Trang chủ", href: "/" },
@@ -52,6 +53,7 @@ export function Header() {
               key={item.name}
               href={item.href}
               className="text-sm font-semibold leading-6 text-foreground hover:text-green-700 transition-colors"
+              onClick={() => trackNavigationClick(item.name)}
             >
               {item.name}
             </Link>
@@ -76,6 +78,7 @@ export function Header() {
                     key={service.name}
                     href={service.href}
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-700 transition-colors"
+                    onClick={() => trackNavigationClick(service.name)}
                   >
                     {service.name}
                   </Link>
@@ -86,6 +89,7 @@ export function Header() {
           <Link
             href="/lien-he"
             className="text-sm font-semibold leading-6 text-foreground hover:text-green-700 transition-colors"
+            onClick={() => trackNavigationClick('Liên hệ')}
           >
             Liên hệ
           </Link>
@@ -94,6 +98,7 @@ export function Header() {
           <a
             href={`tel:${siteConfig.phone}`}
             className="hidden lg:flex items-center gap-x-2 text-sm font-semibold leading-6 text-green-700"
+            onClick={() => trackPhoneClick(siteConfig.phone)}
           >
             <Phone className="h-4 w-4" />
             {siteConfig.phone}
@@ -192,6 +197,7 @@ export function Header() {
               <a
                 href={`tel:${siteConfig.phone}`}
                 className="flex items-center gap-2 rounded-lg px-4 py-3 text-base font-semibold text-green-700 hover:bg-gray-50 transition-colors"
+                onClick={() => trackPhoneClick(siteConfig.phone)}
               >
                 <Phone className="h-5 w-5" />
                 {siteConfig.phone}

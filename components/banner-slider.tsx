@@ -58,45 +58,54 @@ export function BannerSlider() {
   }, [emblaApi, onSelect])
 
   return (
-    <section className="relative h-[400px] sm:h-[500px] lg:h-[600px] w-full overflow-hidden">
-      <div className="overflow-hidden h-full" ref={emblaRef}>
-        <div className="flex h-full">
-          {slides.map((slide, index) => (
-            <div key={index} className="flex-[0_0_100%] min-w-0 relative">
-              <picture>
-                <source
-                  media="(max-width: 768px)"
-                  srcSet={slide.mobileSrc}
-                />
+    <>
+      {/* Mobile: Single banner with fixed height */}
+      <section className="relative w-full h-[235px] overflow-hidden sm:hidden">
+        <Image
+          src="/images/banner2-mobile.jpg"
+          alt="Thu mua điện thoại laptop cũ"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+      </section>
+
+      {/* Desktop/Tablet: Slider with multiple banners */}
+      <section className="hidden sm:block relative w-full sm:aspect-[5/2] lg:aspect-[21/8] overflow-hidden">
+        <div className="overflow-hidden h-full" ref={emblaRef}>
+          <div className="flex h-full">
+            {slides.map((slide, index) => (
+              <div key={index} className="flex-[0_0_100%] min-w-0 relative">
                 <Image
                   src={slide.src}
                   alt={slide.alt}
                   fill
                   priority={index === 0}
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 100vw"
+                  sizes="100vw"
                 />
-              </picture>
-            </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Navigation Dots */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`w-2 h-2 rounded-full transition-all ${
+                index === selectedIndex
+                  ? "bg-white w-8"
+                  : "bg-white/50 hover:bg-white/75"
+              }`}
+              onClick={() => scrollTo(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            />
           ))}
         </div>
-      </div>
-
-      {/* Navigation Dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            className={`w-2 h-2 rounded-full transition-all ${
-              index === selectedIndex
-                ? "bg-white w-8"
-                : "bg-white/50 hover:bg-white/75"
-            }`}
-            onClick={() => scrollTo(index)}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-    </section>
+      </section>
+    </>
   )
 }

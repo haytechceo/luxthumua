@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
+import { trackFormSubmit } from "@/lib/analytics"
 
 export function ContactForm() {
   const { toast } = useToast()
@@ -17,8 +18,14 @@ export function ContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
 
+    const formData = new FormData(e.currentTarget)
+    const device = formData.get('device') as string || 'Not specified'
+
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000))
+
+    // Track form submission
+    trackFormSubmit(`Contact Form - ${device}`)
 
     toast({
       title: "Đã gửi thành công!",

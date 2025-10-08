@@ -1,6 +1,9 @@
+"use client"
+
 import Link from "next/link"
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
 import { siteConfig } from "@/data/site"
+import { trackPhoneClick, trackNavigationClick, trackZaloClick, trackMessengerClick } from "@/lib/analytics"
 
 export function Footer() {
   return (
@@ -20,7 +23,7 @@ export function Footer() {
                   </div>
                   <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm">
                     <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-green-700 flex-shrink-0" />
-                    <a href={`tel:${location.phone}`} className="text-foreground hover:text-green-700">
+                    <a href={`tel:${location.phone}`} className="text-foreground hover:text-green-700" onClick={() => trackPhoneClick(location.phone)}>
                       {location.phone}
                     </a>
                   </div>
@@ -28,7 +31,7 @@ export function Footer() {
               ))}
               <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm pt-1 sm:pt-2">
                 <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-green-700 flex-shrink-0" />
-                <a href={`mailto:${siteConfig.email}`} className="text-foreground hover:text-green-700 break-all">
+                <a href={`mailto:${siteConfig.email}`} className="text-foreground hover:text-green-700 break-all" onClick={() => trackNavigationClick('Email')}>
                   {siteConfig.email}
                 </a>
               </div>
@@ -44,7 +47,7 @@ export function Footer() {
             <h3 className="text-xs sm:text-sm font-semibold text-foreground mb-3 sm:mb-4">Dịch vụ</h3>
             <ul className="space-y-1.5 sm:space-y-2">
               <li>
-                <Link href="/dich-vu/thu-mua-laptop-gaming" className="text-xs sm:text-sm text-muted-foreground hover:text-green-700">
+                <Link href="/dich-vu/thu-mua-laptop-gaming" className="text-xs sm:text-sm text-muted-foreground hover:text-green-700" onClick={() => trackNavigationClick('Footer - Thu mua laptop gaming')}>
                   Thu mua laptop gaming
                 </Link>
               </li>
@@ -81,7 +84,7 @@ export function Footer() {
             <h3 className="text-xs sm:text-sm font-semibold text-foreground mb-3 sm:mb-4">Hỗ trợ khách hàng</h3>
             <ul className="space-y-1.5 sm:space-y-2">
               <li>
-                <Link href="/lien-he" className="text-xs sm:text-sm text-muted-foreground hover:text-green-700">
+                <Link href="/lien-he" className="text-xs sm:text-sm text-muted-foreground hover:text-green-700" onClick={() => trackNavigationClick('Footer - Liên hệ')}>
                   Liên hệ
                 </Link>
               </li>
@@ -91,6 +94,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs sm:text-sm text-muted-foreground hover:text-green-700"
+                  onClick={() => trackZaloClick()}
                 >
                   Chat Zalo
                 </a>
@@ -101,6 +105,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs sm:text-sm text-muted-foreground hover:text-green-700"
+                  onClick={() => trackMessengerClick()}
                 >
                   Chat Messenger
                 </a>

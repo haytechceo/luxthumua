@@ -1,7 +1,10 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight } from "lucide-react"
+import { trackServiceClick } from "@/lib/analytics"
 
 interface ServiceCardProps {
   title: string
@@ -12,7 +15,7 @@ interface ServiceCardProps {
 
 export function ServiceCard({ title, description, image, href }: ServiceCardProps) {
   return (
-    <Link href={href} className="group">
+    <Link href={href} className="group" onClick={() => trackServiceClick(title)}>
       <Card className="overflow-hidden transition-all hover:shadow-lg hover:scale-[1.02]">
         <div className="relative h-48 w-full overflow-hidden">
           <Image

@@ -2,6 +2,7 @@
 
 import { Phone } from "lucide-react"
 import { siteConfig } from "@/data/site"
+import { trackFloatingButtonClick } from "@/lib/analytics"
 
 export function FloatingButtons() {
   return (
@@ -12,6 +13,7 @@ export function FloatingButtons() {
         rel="noopener noreferrer"
         className="group flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#0068FF] text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl"
         aria-label="Chat qua Zalo"
+        onClick={() => trackFloatingButtonClick('zalo')}
       >
         <svg className="h-6 w-6 sm:h-7 sm:w-7" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -34,6 +36,7 @@ export function FloatingButtons() {
         rel="noopener noreferrer"
         className="group flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#0084FF] text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl"
         aria-label="Chat qua Messenger"
+        onClick={() => trackFloatingButtonClick('messenger')}
       >
         <svg className="h-6 w-6 sm:h-7 sm:w-7" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -55,6 +58,7 @@ export function FloatingButtons() {
         href={`tel:${siteConfig.phone}`}
         className="group flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-green-600 text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl animate-pulse"
         aria-label="Gọi điện thoại"
+        onClick={() => trackFloatingButtonClick('phone')}
       >
         <Phone className="h-5 w-5 sm:h-6 sm:w-6" />
         <span className="absolute right-14 sm:right-16 whitespace-nowrap rounded-lg bg-gray-900 px-2 py-1 sm:px-3 sm:py-2 text-xs sm:text-sm text-white opacity-0 transition-opacity group-hover:opacity-100 hidden sm:block">
