@@ -57,7 +57,10 @@ export function getArticleSchema(article: {
   image: string
   slug: string
   datePublished?: string
+  publishDate?: string
+  author?: string
 }) {
+  const publishDate = article.publishDate || article.datePublished || new Date().toISOString()
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -66,7 +69,7 @@ export function getArticleSchema(article: {
     image: `https://luxthumua.com${article.image}`,
     author: {
       "@type": "Organization",
-      name: siteConfig.name,
+      name: article.author || siteConfig.name,
     },
     publisher: {
       "@type": "Organization",
@@ -76,8 +79,8 @@ export function getArticleSchema(article: {
         url: "https://luxthumua.com/logo.png",
       },
     },
-    datePublished: article.datePublished || new Date().toISOString(),
-    dateModified: article.datePublished || new Date().toISOString(),
+    datePublished: publishDate,
+    dateModified: publishDate,
   }
 }
 

@@ -10,6 +10,7 @@ import { trackNavigationClick, trackPhoneClick } from "@/lib/analytics"
 
 const navigation = [
   { name: "Trang chủ", href: "/" },
+  { name: "Tin tức", href: "/tin-tuc" },
 ]
 
 const services = [
