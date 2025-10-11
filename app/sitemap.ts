@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next"
 import { detailServices } from "@/data/services"
+import { posts } from "@/data/posts"
 import newsData from "@/data/news.json"
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -47,6 +48,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
+  // Blog posts from posts.ts
+  const postPages = posts.map((post) => ({
+    url: `${baseUrl}/tin-tuc/${post.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }))
+
   // News articles
   const newsPages = newsData.articles.map((article) => ({
     url: `${baseUrl}/tin-tuc/${article.slug}`,
@@ -55,5 +64,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...servicePages, ...newsPages]
+  return [...staticPages, ...servicePages, ...postPages, ...newsPages]
 }

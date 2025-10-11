@@ -7,6 +7,7 @@ import { ContactForm } from "@/components/contact-form"
 import { StructuredData } from "@/components/structured-data"
 import { getBreadcrumbSchema, getArticleSchema } from "@/lib/structured-data"
 import newsData from "@/data/news.json"
+import { posts } from "@/data/posts"
 import { Calendar, User, Tag, Clock, ArrowLeft, Share2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -15,64 +16,90 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return newsData.articles.map((article) => ({
-    slug: article.slug,
-  }))
+  // Include both posts and news articles
+  const postSlugs = posts.map((post) => ({ slug: post.slug }))
+  const articleSlugs = newsData.articles.map((article) => ({ slug: article.slug }))
+  
+  return [...postSlugs, ...articleSlugs]
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
+  
+  // Check both posts and articles
+  const post = posts.find((p) => p.slug === slug)
   const article = newsData.articles.find((a) => a.slug === slug)
+  
+  const content = post || article
 
-  if (!article) {
+  if (!content) {
     return {
       title: "Bài viết không tồn tại",
     }
   }
 
+  // Check if it's an article (has publishDate)
+  const isArticle = article !== undefined
+  const publishedTime = article?.publishDate ?? new Date().toISOString()
+  const author = article?.author ?? "LuxPhone"
+  const keywords = article?.tags ?? []
+
   return {
-    title: `${article.title} | LuxPhone`,
-    description: article.description,
-    keywords: article.tags,
+    title: `${content.title} | LuxPhone`,
+    description: content.description,
+    keywords: keywords,
     openGraph: {
-      title: article.title,
-      description: article.description,
-      url: `https://luxthumua.com/tin-tuc/${article.slug}`,
-      images: [article.image],
+      title: content.title,
+      description: content.description,
+      url: `https://luxthumua.com/tin-tuc/${content.slug}`,
+      images: [content.image],
       type: "article",
-      publishedTime: article.publishDate,
-      authors: [article.author],
+      publishedTime: publishedTime,
+      authors: [author],
     },
     alternates: {
-      canonical: `https://luxthumua.com/tin-tuc/${article.slug}`,
+      canonical: `https://luxthumua.com/tin-tuc/${content.slug}`,
     },
   }
 }
 
 export default async function ArticlePage({ params }: PageProps) {
   const { slug } = await params
+  
+  // Check both posts and articles
+  const post = posts.find((p) => p.slug === slug)
   const article = newsData.articles.find((a) => a.slug === slug)
+  
+  const content = post || article
 
-  if (!article) {
+  if (!content) {
     notFound()
   }
+
+  // Check if it's an article (from news.json)
+  const isArticle = article !== undefined
+  const publishDate = article?.publishDate ?? new Date().toISOString()
+  const author = article?.author ?? "LuxPhone"
+  const tags = article?.tags
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Trang chủ", url: "https://luxthumua.com" },
     { name: "Tin tức", url: "https://luxthumua.com/tin-tuc" },
-    { name: article.title, url: `https://luxthumua.com/tin-tuc/${article.slug}` },
+    { name: content.title, url: `https://luxthumua.com/tin-tuc/${content.slug}` },
   ])
 
   const articleSchema = getArticleSchema({
-    title: article.title,
-    description: article.description,
-    image: article.image,
-    slug: `tin-tuc/${article.slug}`,
-    publishDate: article.publishDate,
-    author: article.author,
+    title: content.title,
+    description: content.description,
+    image: content.image,
+    slug: `tin-tuc/${content.slug}`,
+    publishDate: publishDate,
+    author: author,
   })
 
-  const otherArticles = newsData.articles.filter((a) => a.slug !== slug).slice(0, 3)
+  // Get other articles/posts (exclude current one)
+  const allContent = [...posts, ...newsData.articles]
+  const otherArticles = allContent.filter((c) => c.slug !== slug).slice(0, 3)
 
   // Simple markdown to HTML conversion
   const renderContent = (content: string) => {
@@ -205,7 +232,7 @@ export default async function ArticlePage({ params }: PageProps) {
       <StructuredData data={breadcrumbSchema} />
       <StructuredData data={articleSchema} />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-        <Breadcrumbs items={[{ label: "Tin tức", href: "/tin-tuc" }, { label: article.title }]} />
+        <Breadcrumbs items={[{ label: "Tin tức", href: "/tin-tuc" }, { label: content.title }]} />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-6">
           {/* Main Content */}
@@ -221,41 +248,47 @@ export default async function ArticlePage({ params }: PageProps) {
 
             {/* Article Header */}
             <div className="mb-6">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-foreground">{article.title}</h1>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-foreground">{content.title}</h1>
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
-                <div className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4" />
-                  <time dateTime={article.publishDate}>
-                    {new Date(article.publishDate).toLocaleDateString("vi-VN", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </time>
-                </div>
-                <div className="flex items-center gap-2">
-                  <User className="h-4 w-4" />
-                  <span>{article.author}</span>
-                </div>
+                {isArticle && (
+                  <div className="flex items-center gap-2">
+                    <Calendar className="h-4 w-4" />
+                    <time dateTime={publishDate}>
+                      {new Date(publishDate).toLocaleDateString("vi-VN", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </time>
+                  </div>
+                )}
+                {isArticle && (
+                  <div className="flex items-center gap-2">
+                    <User className="h-4 w-4" />
+                    <span>{author}</span>
+                  </div>
+                )}
               </div>
-              <div className="flex flex-wrap gap-2">
-                {article.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-muted text-xs text-muted-foreground"
-                  >
-                    <Tag className="h-3 w-3" />
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              {tags && (
+                <div className="flex flex-wrap gap-2">
+                  {tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-muted text-xs text-muted-foreground"
+                    >
+                      <Tag className="h-3 w-3" />
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Featured Image */}
             <div className="relative aspect-video mb-8 rounded-lg overflow-hidden bg-muted">
               <Image
-                src={article.image}
-                alt={article.title}
+                src={content.image}
+                alt={content.title}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 66vw"
@@ -266,7 +299,7 @@ export default async function ArticlePage({ params }: PageProps) {
             {/* Article Content */}
             <div
               className="prose prose-slate max-w-none"
-              dangerouslySetInnerHTML={{ __html: renderContent(article.content) }}
+              dangerouslySetInnerHTML={{ __html: renderContent(content.content) }}
             />
 
             {/* Share Buttons */}
@@ -275,7 +308,7 @@ export default async function ArticlePage({ params }: PageProps) {
               <div className="flex gap-3">
                 <Button size="sm" variant="outline" asChild>
                   <a
-                    href={`https://www.facebook.com/sharer/sharer.php?u=https://luxthumua.com/tin-tuc/${article.slug}`}
+                    href={`https://www.facebook.com/sharer/sharer.php?u=https://luxthumua.com/tin-tuc/${content.slug}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -285,7 +318,7 @@ export default async function ArticlePage({ params }: PageProps) {
                 </Button>
                 <Button size="sm" variant="outline" asChild>
                   <a
-                    href={`https://zalo.me/share?url=https://luxthumua.com/tin-tuc/${article.slug}`}
+                    href={`https://zalo.me/share?url=https://luxthumua.com/tin-tuc/${content.slug}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -301,12 +334,12 @@ export default async function ArticlePage({ params }: PageProps) {
           <aside className="lg:col-span-1">
             <div className="lg:sticky lg:top-24 space-y-6">
               {/* Table of Contents */}
-              {article.toc && article.toc.length > 0 && (
+              {content.toc && content.toc.length > 0 && (
                 <div className="rounded-lg border border-border bg-card p-6">
                   <h3 className="font-semibold text-lg mb-4">Nội dung bài viết</h3>
                   <nav>
                     <ul className="space-y-2 text-sm">
-                      {article.toc.map((item) => (
+                      {content.toc.filter((item) => item && item.id && item.title).map((item) => (
                         <li key={item.id}>
                           <a
                             href={`#${item.id}`}
@@ -342,20 +375,26 @@ export default async function ArticlePage({ params }: PageProps) {
                 <div className="rounded-lg border border-border bg-card p-6">
                   <h3 className="font-semibold text-lg mb-4">Bài viết khác</h3>
                   <div className="space-y-4">
-                    {otherArticles.map((otherArticle) => (
-                      <Link
-                        key={otherArticle.slug}
-                        href={`/tin-tuc/${otherArticle.slug}`}
-                        className="block group"
-                      >
-                        <h4 className="text-sm font-medium line-clamp-2 group-hover:text-green-700 transition-colors">
-                          {otherArticle.title}
-                        </h4>
-                        <p className="text-xs text-muted-foreground mt-1">
-                          {new Date(otherArticle.publishDate).toLocaleDateString("vi-VN")}
-                        </p>
-                      </Link>
-                    ))}
+                    {otherArticles.filter((item) => item && item.slug && item.title).map((otherArticle) => {
+                      // Check if it's an article (has publishDate)
+                      const isOtherArticle = "publishDate" in otherArticle
+                      return (
+                        <Link
+                          key={otherArticle.slug}
+                          href={`/tin-tuc/${otherArticle.slug}`}
+                          className="block group"
+                        >
+                          <h4 className="text-sm font-medium line-clamp-2 group-hover:text-green-700 transition-colors">
+                            {otherArticle.title}
+                          </h4>
+                          {isOtherArticle && (
+                            <p className="text-xs text-muted-foreground mt-1">
+                              {new Date((otherArticle as any).publishDate).toLocaleDateString("vi-VN")}
+                            </p>
+                          )}
+                        </Link>
+                      )
+                    })}
                   </div>
                 </div>
               )}
