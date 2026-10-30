@@ -17,7 +17,7 @@ export const siteConfig = {
     },
   ],
   phone: "0839600000",
-  email: "luxphonemobile@gmail.com",
+  email: "phamquangdatmoney@icloud.com",
   zalo: "https://zalo.me/0839600000",
   messenger: "https://www.facebook.com/luxphonetantam",
   workingHours: "Thứ 2 - Chủ nhật: 8:00 - 21:00",

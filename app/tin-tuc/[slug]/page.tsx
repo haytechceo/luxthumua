@@ -365,7 +365,7 @@ export default async function ArticlePage({ params }: PageProps) {
                 <h3 className="font-semibold text-lg mb-4">Liên hệ trực tiếp</h3>
                 <div className="space-y-3 text-sm">
                   <p>📞 Hotline: 0839600000</p>
-                  <p>📧 Email: luxphonemobile@gmail.com</p>
+                  <p>📧 Email: phamquangdatmoney@icloud.com</p>
                   <p>🕒 Giờ làm việc: 8:00 - 21:00</p>
                 </div>
               </div>
