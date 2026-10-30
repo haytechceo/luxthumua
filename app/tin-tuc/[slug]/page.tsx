@@ -366,7 +366,7 @@ export default async function ArticlePage({ params }: PageProps) {
                 <div className="space-y-3 text-sm">
                   <p>📞 Hotline: 0839600000</p>
                   <p>📧 Email: phamquangdatmoney@icloud.com</p>
-                  <p>🕒 Giờ làm việc: 8:00 - 21:00</p>
+                  <p>🕒 Thu mua 24/24, cả Chủ nhật</p>
                 </div>
               </div>
 
