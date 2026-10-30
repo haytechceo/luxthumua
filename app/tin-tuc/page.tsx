@@ -8,7 +8,7 @@ import newsData from "@/data/news.json"
 import { Calendar, User, Tag } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Tin tức - Kiến thức thu mua điện thoại, laptop | LuxPhone",
+  title: "Tin tức - Kiến thức thu mua điện thoại, laptop | Luxthumua",
   description:
     "Cập nhật tin tức mới nhất về thị trường thu mua điện thoại, laptop cũ. Chia sẻ kinh nghiệm, bảng giá, địa chỉ uy tín.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "kinh nghiệm bán điện thoại",
   ],
   openGraph: {
-    title: "Tin tức - Kiến thức thu mua điện thoại, laptop | LuxPhone",
+    title: "Tin tức - Kiến thức thu mua điện thoại, laptop | Luxthumua",
     description: "Cập nhật tin tức, kiến thức về thị trường thu mua điện thoại, laptop cũ",
     url: "https://luxthumua.com/tin-tuc",
   },
