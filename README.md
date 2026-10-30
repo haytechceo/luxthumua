@@ -1,4 +1,4 @@
-# LuxPhone - Website Thu Mua Điện Thoại & Laptop
+# Luxthumua - Website Thu Mua Điện Thoại & Laptop
 
 Website tĩnh Next.js cho dịch vụ thu mua điện thoại, laptop cũ. Tối ưu SEO, responsive, dễ tùy biến.
 
@@ -27,7 +27,7 @@ Mở file `data/site.ts` và chỉnh sửa:
 
 \`\`\`typescript
 export const siteConfig = {
-  name: "LuxPhone", // Tên thương hiệu
+  name: "Luxthumua", // Tên thương hiệu
   phone: "0328488888", // Số điện thoại
   email: "luxphonemobile@gmail.com", // Email
   zalo: "https://zalo.me/0328488888", // Link Zalo

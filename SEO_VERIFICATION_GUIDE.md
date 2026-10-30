@@ -33,7 +33,7 @@
 
 **Expected Results:**
 - ✅ Image displays: `https://luxthumua.com/images/banner.jpg`
-- ✅ Title: "LuxPhone - Thu mua điện thoại, laptop cũ giá cao"
+- ✅ Title: "Luxthumua - Thu mua điện thoại, laptop cũ giá cao"
 - ✅ Description visible
 - ✅ Domain: luxthumua.com
 
@@ -133,8 +133,8 @@ Use browser developer tools or view page source:
 3. Go to: Application → Manifest
 
 **Expected:**
-- ✅ Name: "LuxPhone - Thu mua điện thoại, laptop cũ"
-- ✅ Short name: "LuxPhone"
+- ✅ Name: "Luxthumua - Thu mua điện thoại, laptop cũ"
+- ✅ Short name: "Luxthumua"
 - ✅ Icons: 3 entries (48x48, 192x192, 512x512)
 - ✅ Theme color: #15803d
 - ✅ No errors
