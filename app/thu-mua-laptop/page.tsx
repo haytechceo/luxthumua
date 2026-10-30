@@ -208,7 +208,7 @@ export default function ThuMuaLaptopPage() {
                   <Link href="/lien-he">Liên hệ ngay</Link>
                 </Button>
                 <Button asChild variant="outline">
-                  <a href="tel:0328488888">Gọi hotline: 0328488888</a>
+                  <a href="tel:0839600000">Gọi hotline: 0839600000</a>
                 </Button>
               </div>
             </section>

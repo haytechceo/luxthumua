@@ -22,11 +22,11 @@ const iconMap = {
 }
 
 export const metadata: Metadata = {
-  title: "Thu mua điện thoại, laptop cũ giá cao - Uy tín, thanh toán nhanh | LuxPhone",
+  title: "Thu mua điện thoại, laptop cũ giá cao - Uy tín, thanh toán nhanh | Luxthumua",
   description:
     "Dịch vụ thu mua điện thoại, laptop cũ uy tín tại Hà Nội và TP.HCM. Thu mua iPhone, Samsung, Macbook, Dell, HP với giá cao nhất. Thu mua tận nhà, thanh toán ngay.",
   openGraph: {
-    title: "Thu mua điện thoại, laptop cũ giá cao - Uy tín, thanh toán nhanh | LuxPhone",
+    title: "Thu mua điện thoại, laptop cũ giá cao - Uy tín, thanh toán nhanh | Luxthumua",
     description:
       "Thu mua điện thoại, laptop cũ mọi hãng, mọi tình trạng. Giá cao nhất thị trường, thu mua tận nhà, thanh toán nhanh.",
     url: "https://luxthumua.com",

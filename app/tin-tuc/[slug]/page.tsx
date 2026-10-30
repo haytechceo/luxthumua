@@ -41,11 +41,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // Check if it's an article (has publishDate)
   const isArticle = article !== undefined
   const publishedTime = article?.publishDate ?? new Date().toISOString()
-  const author = article?.author ?? "LuxPhone"
+  const author = article?.author ?? "Luxthumua"
   const keywords = article?.tags ?? []
 
   return {
-    title: `${content.title} | LuxPhone`,
+    title: `${content.title} | Luxthumua`,
     description: content.description,
     keywords: keywords,
     openGraph: {
@@ -79,7 +79,7 @@ export default async function ArticlePage({ params }: PageProps) {
   // Check if it's an article (from news.json)
   const isArticle = article !== undefined
   const publishDate = article?.publishDate ?? new Date().toISOString()
-  const author = article?.author ?? "LuxPhone"
+  const author = article?.author ?? "Luxthumua"
   const tags = article?.tags
 
   const breadcrumbSchema = getBreadcrumbSchema([
@@ -364,7 +364,7 @@ export default async function ArticlePage({ params }: PageProps) {
               <div className="rounded-lg bg-green-700 p-6 text-white">
                 <h3 className="font-semibold text-lg mb-4">Liên hệ trực tiếp</h3>
                 <div className="space-y-3 text-sm">
-                  <p>📞 Hotline: 0328488888</p>
+                  <p>📞 Hotline: 0839600000</p>
                   <p>📧 Email: luxphonemobile@gmail.com</p>
                   <p>🕒 Giờ làm việc: 8:00 - 21:00</p>
                 </div>

@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 export const metadata: Metadata = {
   title: "Liên hệ - Thu mua điện thoại, laptop cũ",
   description:
-    "Liên hệ với chúng tôi để được tư vấn và báo giá thu mua điện thoại, laptop cũ. Hotline: 0328488888. Hỗ trợ 24/7.",
+    "Liên hệ với chúng tôi để được tư vấn và báo giá thu mua điện thoại, laptop cũ. Hotline: 0839600000. Hỗ trợ 24/7.",
   openGraph: {
     title: "Liên hệ - Thu mua điện thoại, laptop cũ",
     description: "Liên hệ ngay để được tư vấn và báo giá miễn phí. Hỗ trợ 24/7.",
