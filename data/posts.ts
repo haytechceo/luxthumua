@@ -22,11 +22,11 @@ export const posts: Post[] = [
     content: `
 ## Giới thiệu dịch vụ {#gioi-thieu}
 
-LuxPhone chuyên cung cấp dịch vụ **thu mua máy tính cũ** tại Hà Nội và TP.HCM với giá cao nhất thị trường. Chúng tôi nhận thu mua mọi loại máy tính để bàn, từ cấu hình văn phòng đến máy gaming cao cấp, dù máy còn hoạt động tốt hay đã hỏng hóc.
+Luxthumua chuyên cung cấp dịch vụ **thu mua máy tính cũ** tại Hà Nội và TP.HCM với giá cao nhất thị trường. Chúng tôi nhận thu mua mọi loại máy tính để bàn, từ cấu hình văn phòng đến máy gaming cao cấp, dù máy còn hoạt động tốt hay đã hỏng hóc.
 
 Với hơn 10 năm kinh nghiệm, đội ngũ kỹ thuật viên chuyên nghiệp của chúng tôi sẽ định giá chính xác và công bằng nhất cho thiết bị của bạn. Quy trình thu mua nhanh chóng, minh bạch, thanh toán ngay sau khi thỏa thuận.
 
-### Tại sao nên bán máy tính cũ cho LuxPhone?
+### Tại sao nên bán máy tính cũ cho Luxthumua?
 
 - **Giá cao nhất**: So sánh giá với nhiều đơn vị, cam kết mua với giá tốt nhất
 - **Thu mua tận nơi**: Nhân viên đến tận nhà/văn phòng, không mất phí
@@ -37,7 +37,7 @@ Với hơn 10 năm kinh nghiệm, đội ngũ kỹ thuật viên chuyên nghiệ
 
 ### Bước 1: Liên hệ và tư vấn
 
-Khách hàng liên hệ qua hotline **0328488888**, Zalo hoặc Messenger để cung cấp thông tin về máy tính cần bán (cấu hình, tình trạng, năm sản xuất). Chúng tôi sẽ báo giá sơ bộ qua điện thoại.
+Khách hàng liên hệ qua hotline **0839600000**, Zalo hoặc Messenger để cung cấp thông tin về máy tính cần bán (cấu hình, tình trạng, năm sản xuất). Chúng tôi sẽ báo giá sơ bộ qua điện thoại.
 
 ### Bước 2: Kiểm tra và định giá
 
@@ -71,12 +71,12 @@ Dưới đây là bảng giá tham khảo cho một số cấu hình phổ biế
 
 ## Liên hệ ngay để nhận báo giá {#lien-he}
 
-Bạn đang có máy tính cũ muốn bán? Hãy liên hệ ngay với LuxPhone để được tư vấn và báo giá miễn phí:
+Bạn đang có máy tính cũ muốn bán? Hãy liên hệ ngay với Luxthumua để được tư vấn và báo giá miễn phí:
 
-- **Hotline**: 0328488888
-- **Zalo**: [Chat ngay](https://zalo.me/0328488888)
+- **Hotline**: 0839600000
+- **Zalo**: [Chat ngay](https://zalo.me/0839600000)
 - **Messenger**: [Nhắn tin](https://m.me/luxphone.vn)
-- **Email**: luxphonemobile@gmail.com
+- **Email**: phamquangdatmoney@icloud.com
 
 Chúng tôi cam kết mang đến dịch vụ thu mua máy tính cũ uy tín, giá cao, thanh toán nhanh chóng nhất tại Hà Nội và TP.HCM.
     `,
@@ -96,11 +96,11 @@ Chúng tôi cam kết mang đến dịch vụ thu mua máy tính cũ uy tín, gi
     content: `
 ## Dịch vụ thu mua laptop cũ chuyên nghiệp {#gioi-thieu}
 
-LuxPhone là đơn vị hàng đầu trong lĩnh vực **thu mua laptop cũ** tại Hà Nội và TP.HCM. Chúng tôi nhận thu mua mọi thương hiệu laptop từ phổ thông đến cao cấp, dù máy còn hoạt động tốt hay đã hỏng hóc.
+Luxthumua là đơn vị hàng đầu trong lĩnh vực **thu mua laptop cũ** tại Hà Nội và TP.HCM. Chúng tôi nhận thu mua mọi thương hiệu laptop từ phổ thông đến cao cấp, dù máy còn hoạt động tốt hay đã hỏng hóc.
 
 Với đội ngũ chuyên gia giàu kinh nghiệm, chúng tôi cam kết định giá công bằng, minh bạch dựa trên tình trạng thực tế của máy. Quy trình thu mua nhanh chóng, thanh toán ngay, hỗ trợ thu mua tận nơi miễn phí.
 
-### Ưu điểm khi bán laptop cho LuxPhone
+### Ưu điểm khi bán laptop cho Luxthumua
 
 - Thu mua mọi thương hiệu: Dell, HP, Asus, Lenovo, Acer, MSI, Macbook...
 - Nhận cả laptop hỏng: màn hình vỡ, pin chai, bàn phím lỗi...
@@ -161,7 +161,7 @@ Nhiều người có 2-3 chiếc laptop nhưng chỉ dùng 1 chiếc. Thay vì �
 
 ### Bước 1: Liên hệ và cung cấp thông tin
 
-Gọi hotline **0328488888** hoặc nhắn tin qua Zalo/Messenger. Cung cấp thông tin:
+Gọi hotline **0839600000** hoặc nhắn tin qua Zalo/Messenger. Cung cấp thông tin:
 - Thương hiệu và model laptop (VD: Dell Inspiron 15 3000)
 - Cấu hình (CPU, RAM, ổ cứng)
 - Tình trạng máy (còn hoạt động tốt, có lỗi gì không)
@@ -188,7 +188,7 @@ Toàn bộ quy trình chỉ mất 20-30 phút. Nhanh chóng, tiện lợi, khôn
 
 ---
 
-**Liên hệ ngay**: 0328488888 | [Zalo](https://zalo.me/0328488888) | [Messenger](https://m.me/luxphone.vn)
+**Liên hệ ngay**: 0839600000 | [Zalo](https://zalo.me/0839600000) | [Messenger](https://m.me/luxphone.vn)
     `,
   },
   {
@@ -206,11 +206,11 @@ Toàn bộ quy trình chỉ mất 20-30 phút. Nhanh chóng, tiện lợi, khôn
     content: `
 ## Thu mua điện thoại cũ giá cao nhất thị trường {#gioi-thieu}
 
-LuxPhone chuyên **thu mua điện thoại cũ** tại Hà Nội và TP.HCM với giá cao nhất thị trường. Chúng tôi nhận thu mua mọi loại điện thoại từ phổ thông đến cao cấp, mọi thương hiệu: iPhone, Samsung, Oppo, Xiaomi, Vivo, Realme, Huawei...
+Luxthumua chuyên **thu mua điện thoại cũ** tại Hà Nội và TP.HCM với giá cao nhất thị trường. Chúng tôi nhận thu mua mọi loại điện thoại từ phổ thông đến cao cấp, mọi thương hiệu: iPhone, Samsung, Oppo, Xiaomi, Vivo, Realme, Huawei...
 
 Dù điện thoại của bạn còn mới 99%, hay đã cũ, màn hình vỡ, nguồn hỏng, chúng tôi đều nhận thu mua với giá hợp lý nhất. Quy trình nhanh chóng, minh bạch, thanh toán ngay.
 
-### Tại sao nên bán điện thoại cũ cho LuxPhone?
+### Tại sao nên bán điện thoại cũ cho Luxthumua?
 
 - **Giá cao nhất**: So sánh với nhiều nơi, chúng tôi luôn mua với giá tốt nhất
 - **Thu mua mọi tình trạng**: Máy đẹp, máy cũ, máy hỏng đều nhận
@@ -256,7 +256,7 @@ Dù điện thoại của bạn còn mới 99%, hay đã cũ, màn hình vỡ, n
 
 ### Bước 1: Liên hệ và báo giá sơ bộ
 
-Liên hệ qua hotline **0328488888**, Zalo hoặc Messenger. Cung cấp thông tin:
+Liên hệ qua hotline **0839600000**, Zalo hoặc Messenger. Cung cấp thông tin:
 - Model điện thoại (VD: iPhone 14 Pro 256GB)
 - Tình trạng máy (còn đẹp, có trầy xước, màn hình vỡ...)
 - Phụ kiện kèm theo (hộp, sạc, cáp...)
@@ -318,10 +318,10 @@ Hiện tại chúng tôi chỉ hỗ trợ thu mua tận nhà tại **Hà Nội**
 ---
 
 **Liên hệ ngay để nhận báo giá**:
-- Hotline: **0328488888**
-- Zalo: [Chat ngay](https://zalo.me/0328488888)
+- Hotline: **0839600000**
+- Zalo: [Chat ngay](https://zalo.me/0839600000)
 - Messenger: [Nhắn tin](https://m.me/luxphone.vn)
-- Email: luxphonemobile@gmail.com
+- Email: phamquangdatmoney@icloud.com
     `,
   },
 ]

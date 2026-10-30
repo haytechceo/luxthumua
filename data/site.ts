@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "LuxPhone",
+  name: "Luxthumua",
   slogan: "Thu mua điện thoại, laptop cũ - Giá cao, uy tín, thanh toán nhanh",
   description:
     "Dịch vụ thu mua điện thoại, laptop cũ tại Hà Nội và TP.HCM. Định giá minh bạch, thu mua tận nhà, thanh toán ngay.",
@@ -8,17 +8,17 @@ export const siteConfig = {
     {
       name: "Cơ sở 1",
       address: "85 Tam Khương, Hà Nội",
-      phone: "0328488888",
+      phone: "0839600000",
     },
     {
       name: "Cơ sở 2",
       address: "555 Quang Trung, Gò Vấp, Sài Gòn",
-      phone: "0328488888",
+      phone: "0839600000",
     },
   ],
-  phone: "0328488888",
-  email: "luxphonemobile@gmail.com",
-  zalo: "https://zalo.me/0328488888",
+  phone: "0839600000",
+  email: "phamquangdatmoney@icloud.com",
+  zalo: "https://zalo.me/0839600000",
   messenger: "https://www.facebook.com/luxphonetantam",
   workingHours: "Thứ 2 - Chủ nhật: 8:00 - 21:00",
   keywords: ["thu mua điện thoại", "thu mua laptop", "thu mua máy tính cũ", "thu mua tận nhà", "giá cao uy tín"],
