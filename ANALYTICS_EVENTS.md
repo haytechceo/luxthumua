@@ -10,7 +10,7 @@ Dự án đã được tích hợp Google Analytics event tracking để theo d�
 
 | Event Action | Component | Mô tả |
 |--------------|-----------|-------|
-| `submit` | ContactForm | Khi người dùng submit form liên hệ (bao gồm tên thiết bị) |
+| `submit` | ContactForm | Khi form liên hệ gửi khách về TuMu thành công (bao gồm tên thiết bị) |
 | `call` | Header, Footer, FloatingButtons | Khi click vào số điện thoại |
 | `message` | FloatingButtons, Footer | Khi click vào nút Zalo/Messenger |
 
@@ -46,6 +46,31 @@ Dự án đã được tích hợp Google Analytics event tracking để theo d�
 |--------------|-----------|-------|
 | `click` | BannerSlider | Khi click vào banner (nếu được thêm) |
 | `click` | Social Links | Khi click vào social media links |
+
+### 5. Lead Events (Khách để lại số) — qua GTM dataLayer
+Container: `GTM-KXQFPGPL` (load trong `app/layout.tsx`)
+
+| Event name | Component | Mô tả |
+|------------|-----------|-------|
+| `generate_lead` | ContactForm | Khi TuMu nhận khách thành công (server trả về mã hẹn). Lỗi, spam, gửi trùng **không** bắn event |
+
+**Tham số đẩy vào `window.dataLayer`:**
+
+| Tham số | Giá trị | Ý nghĩa |
+|---------|---------|---------|
+| `event` | `generate_lead` | Tên event chuẩn GA4 cho lead |
+| `shop` | `sg` / `hn` / `unknown` | Khu vực khách chọn (Sài Gòn / Hà Nội / chưa chọn) |
+| `page` | pathname, vd `/lien-he`, `/thu-mua-laptop` | Trang khách điền form |
+
+```typescript
+import { trackGenerateLead } from '@/lib/analytics'
+trackGenerateLead({ shop: 'sg', page: '/lien-he' })
+// window.dataLayer.push({ event: 'generate_lead', shop: 'sg', page: '/lien-he' })
+```
+
+**Cài trong GTM (làm một lần):** Trigger *Custom Event* tên `generate_lead` → Tag *GA4 Event*
+`generate_lead` với 2 tham số `shop`, `page` lấy từ *Data Layer Variable* cùng tên → trong GA4
+đánh dấu `generate_lead` là conversion.
 
 ## File cấu trúc
 
@@ -107,7 +132,8 @@ trackPhoneClick('0328488888')
 ## Events được track
 
 ### Contact Flow
-- ✅ Form submission với tên thiết bị
+- ✅ Form submission với tên thiết bị (chỉ khi TuMu đã nhận khách)
+- ✅ `generate_lead` qua GTM dataLayer với `shop`, `page`
 - ✅ Phone clicks từ header, footer, floating buttons
 - ✅ Zalo/Messenger clicks từ floating buttons và footer
 

@@ -7,6 +7,7 @@ declare global {
       targetId: string,
       config?: Record<string, any>
     ) => void
+    dataLayer?: unknown[]
   }
 }
 
@@ -51,6 +52,18 @@ export const trackFormSubmit = (formName: string) => {
     GAEventCategory.CONTACT,
     formName
   )
+}
+
+// GTM / GA4 lead conversion. Fires once per lead that TuMu accepted (a booking
+// code came back), so the count equals real customers to call back.
+export const trackGenerateLead = (params: { shop: string | null; page: string }) => {
+  if (typeof window === 'undefined') return
+  window.dataLayer = window.dataLayer || []
+  window.dataLayer.push({
+    event: 'generate_lead',
+    shop: params.shop ?? 'unknown',
+    page: params.page,
+  })
 }
 
 export const trackPhoneClick = (phoneNumber: string) => {
