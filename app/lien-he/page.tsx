@@ -45,7 +45,11 @@ export default function LienHePage() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Địa chỉ</h3>
-                    <p className="text-muted-foreground">{siteConfig.address}</p>
+                    {siteConfig.addresses.map((a) => (
+                      <p key={a.address} className="text-muted-foreground">
+                        {a.name}: {a.address}
+                      </p>
+                    ))}
                   </div>
                 </div>
 
@@ -116,7 +120,7 @@ export default function LienHePage() {
                 <div className="text-center">
                   <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
                   <p className="text-sm text-muted-foreground">Bản đồ vị trí</p>
-                  <p className="text-xs text-muted-foreground mt-1">{siteConfig.address}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{siteConfig.addresses.map((a) => a.address).join(" · ")}</p>
                 </div>
               </div>
             </div>
