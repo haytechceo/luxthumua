@@ -45,7 +45,7 @@ export function getLocalBusinessSchema() {
       addressLocality: "Hà Nội",
       addressCountry: "VN",
     },
-    openingHours: "Mo-Su 08:00-21:00",
+    openingHours: "Mo-Su 00:00-23:59",
     priceRange: "$$",
     image: "https://luxthumua.com/images/banner.jpg",
   }

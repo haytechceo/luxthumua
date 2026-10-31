@@ -192,7 +192,7 @@ export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
                 <div className="space-y-3 text-sm">
                   <p>Hotline: 0839600000</p>
                   <p>Email: phamquangdatmoney@icloud.com</p>
-                  <p>Giờ làm việc: 8:00 - 21:00</p>
+                  <p>Thu mua 24/24, cả Chủ nhật</p>
                 </div>
                 <Button asChild className="w-full mt-4 bg-yellow-500 hover:bg-yellow-600 text-gray-900">
                   <Link href="/lien-he">Xem thông tin liên hệ</Link>

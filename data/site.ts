@@ -20,7 +20,7 @@ export const siteConfig = {
   email: "phamquangdatmoney@icloud.com",
   zalo: "https://zalo.me/0839600000",
   messenger: "https://www.facebook.com/luxphonetantam",
-  workingHours: "Thứ 2 - Chủ nhật: 8:00 - 21:00",
+  workingHours: "Thu mua 24/24, cả Chủ nhật và ngày lễ",
   keywords: ["thu mua điện thoại", "thu mua laptop", "thu mua máy tính cũ", "thu mua tận nhà", "giá cao uy tín"],
 }
 
